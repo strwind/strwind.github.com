@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>demo</title>
+        <style type="text/css">
+            #outBox {height:540px;width:540px;border:1px solid #f00}
+            .inBox {float:left;height:180px;width:180px;}
+        </style>
+    </head>
+    <body>
+        <div id="outBox">
+            <div class="inBox" myValue="0" style="background:url(images/mm_01.png);"></div>
+            <div class="inBox" myValue="1" style="background:url(images/mm_02.png);"></div>
+            <div class="inBox" myValue="2" style="background:url(images/mm_03.png);"></div>
+            <div class="inBox" myValue="3" style="background:url(images/mm_04.png);"></div>
+            <div class="inBox" myValue="4" style="background:url(images/mm_05.png);"></div>
+            <div class="inBox" myValue="5" style="background:url(images/mm_06.png);"></div>
+            <div class="inBox" myValue="6" style="background:url(images/mm_07.png);"></div>
+            <div class="inBox" myValue="7" style="background:url(images/mm_08.png);"></div>
+            <div class="inBox" myValue="8" style="background:;"></div>
+        </div>
+        <script type="text/javascript">
+            var arrInBox = document.getElementById('outBox').getElementsByTagName('div');
+
+            var gameInit = function() { //step1: random the blocks position
+                    var arrTemp = new Array();
+                    for (var i = 0; i < 9; i++) {
+                        arrTemp[i] = arrInBox[i];
+                    }
+                   /*arrInBox = new Array();
+                    document.getElementById('outBox').innerHTML = '';
+                     for (var i = 0; i < 9; i++) {
+                        var _index = Math.floor(Math.random() * arrTemp.length);
+                        arrInBox[i] = arrTemp[_index];
+                        arrInBox[i].setAttribute('myIndex', i);
+                        arrInBox[i].onclick = doOnClick;
+                        arrTemp.splice(_index, 1);
+                        document.getElementById('outBox').appendChild(arrInBox[i]);
+                    }*/
+					//document.getElementById('outBox').innerHTML = '';
+                    for (var i = 0; i < 9; i++) {
+                        var _index = Math.floor(Math.random() * arrTemp.length);
+                        arrTemp[_index].setAttribute('myIndex', i);
+                        arrTemp[_index].onclick = doOnClick;
+						document.getElementById('outBox').appendChild(arrTemp[_index]);
+                        arrTemp.splice(_index, 1);
+                    }
+                },
+                doOnClick = function(e) { //step2: event 
+                    var myIndex = e.currentTarget.getAttribute('myindex') - 0,
+                        myValue,
+                        myTop,
+                        myRight,
+                        myBottom,
+                        myLeft;
+                    (function() {
+                        myTop       = getSibling(myIndex, 't');
+                        if (myTop > -1 && isMoveable(myTop)) {
+							//交换myValue值
+                            myValue = arrInBox[myIndex].getAttribute('myValue');
+                            arrInBox[myIndex].setAttribute('myValue', arrInBox[myTop].getAttribute('myValue'));
+                            arrInBox[myTop].setAttribute('myValue', myValue);
+							//交换背景
+                            arrInBox[myTop].style.background = arrInBox[myIndex].style.background;
+                            arrInBox[myIndex].style.background = '';
+                            return;
+                        }
+                        myRight     = getSibling(myIndex, 'r');
+                        if (myRight > -1 && isMoveable(myRight)) {
+                            myValue = arrInBox[myIndex].getAttribute('myValue');
+                            arrInBox[myIndex].setAttribute('myValue', arrInBox[myRight].getAttribute('myValue'));
+                            arrInBox[myRight].setAttribute('myValue', myValue);
+                            arrInBox[myRight].style.background = arrInBox[myIndex].style.background;
+                            arrInBox[myIndex].style.background = '';
+                            return;
+                        }
+                        myBottom    = getSibling(myIndex, 'b');
+                        if (myBottom > -1 && isMoveable(myBottom)) {
+                            myValue = arrInBox[myIndex].getAttribute('myValue');
+                            arrInBox[myIndex].setAttribute('myValue', arrInBox[myBottom].getAttribute('myValue'));
+                            arrInBox[myBottom].setAttribute('myValue', myValue);
+                            arrInBox[myBottom].style.background = arrInBox[myIndex].style.background;
+                            arrInBox[myIndex].style.background = '';
+                            return;
+                        }
+                        myLeft      = getSibling(myIndex, 'l');
+                        if (myLeft > -1 && isMoveable(myLeft)) {
+                            myValue = arrInBox[myIndex].getAttribute('myValue');
+                            arrInBox[myIndex].setAttribute('myValue', arrInBox[myLeft].getAttribute('myValue'));
+                            arrInBox[myLeft].setAttribute('myValue', myValue);
+                            arrInBox[myLeft].style.background = arrInBox[myIndex].style.background;
+                            arrInBox[myIndex].style.background = '';
+                            return;
+                        }
+                    })();
+                    
+                    if (hasCompleted()) {
+                        alert('恭喜！');
+                    }
+                },
+                getSibling = function(index, side) {
+                    var nextIndex = undefined;
+                    switch (side) {
+                    case 't':
+                        nextIndex = (index - 3) >= 0 ? (index - 3) : -1;
+                        break;
+                    case 'r':
+                        nextIndex = (index % 3 !== 2) ? (index + 1) : -1;
+                        break;
+                    case 'b':
+                        nextIndex = (index + 3) <= 8 ? (index + 3) : -1;
+                        break;
+                    case 'l':
+                        nextIndex = (index % 3 !== 0) ? (index - 1) : -1;
+                        break;
+                    }
+                    return nextIndex;
+                },
+                isMoveable = function(index) {
+                    return arrInBox[index].style.background === '';
+                },
+                hasCompleted = function() {
+                    for (var i = 0; i < 9; i++) {
+                        if (arrInBox[i].getAttribute('myValue') != i) {
+                            return false;
+                        }
+                    }
+                    return true;
+                };
+            
+            gameInit();
+        </script>
+    </body>
+</html>

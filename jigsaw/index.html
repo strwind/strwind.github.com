@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拼图游戏</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+#container{width:540px; border:red solid 1px; overflow:hidden; margin:10px auto;}
+#container li{ width:180px; height:180px; float:left; list-style:none;}
+</style>
+</head>
+
+<body>
+<div>
+	<ul id="container">
+    	<li myValue="0" style="background:url(images/mm_01.png) no-repeat"></li>
+        <li myValue="1" style="background:url(images/mm_02.png) no-repeat"></li>
+        <li myValue="2" style="background:url(images/mm_03.png) no-repeat"></li>
+        <li myValue="3" style="background:url(images/mm_04.png) no-repeat"></li>
+        <li myValue="4" style="background:url(images/mm_05.png) no-repeat"></li>
+        <li myValue="5" style="background:url(images/mm_06.png) no-repeat"></li>
+        <li myValue="6" style="background:url(images/mm_07.png) no-repeat"></li>
+        <li myValue="7" style="background:url(images/mm_08.png) no-repeat"></li>
+        <li myValue="8" style="background:"></li>
+    </ul>
+</div>
+<script type="text/javascript">
+//拼图游戏
+var game={
+	//初始化
+	init:function(id){
+		this.autoSort(id);
+	},
+	//图片数组	全局变量 供全局调用
+	arrLi:new Array(),
+	//打乱图片  供init调用
+	autoSort:function(id){
+		var box=(typeof id=="string")?document.getElementById(id):id,
+			arrTemp=[],
+			that=this,
+			n,
+			i,			
+			len,
+			_index;
+		that.arrLi=box.getElementsByTagName("li");	
+		for(n in that.arrLi){
+			arrTemp[n]=that.arrLi[n];	
+		}
+		for(i=0,len=arrTemp.length;i<len;i++){
+			_index=Math.floor(Math.random()*arrTemp.length);
+			//为每张图片绑定事件
+			arrTemp[_index].onclick=function(event){that.move(event)};
+			arrTemp[_index].setAttribute("myIndex",i);
+			box.appendChild(arrTemp[_index]);
+			arrTemp.splice(_index,1);
+		}
+	},
+	//点击鼠标后的动作 供autoSort调用
+	move:function(evt){
+		var evt=window.event||evt,
+			target=evt.srcElement||evt.target,
+			myIndex=target.getAttribute("myIndex")-0,
+			that=this,
+			newValue,
+			top,
+			down,
+			left,
+			right;
+		function judgeSide(num,side){
+			num=that.getSibiling(myIndex,side);
+			if(num>-1&&that.isMoveable(num)){
+				//交换myValue
+				newValue=that.arrLi[myIndex].getAttribute("myValue");
+				that.arrLi[myIndex].setAttribute("myValue",that.arrLi[num].getAttribute("myValue"));
+				that.arrLi[num].setAttribute("myValue",newValue);		
+				//交换背景图
+				that.arrLi[num].style.background=that.arrLi[myIndex].style.background;
+				that.arrLi[myIndex].style.background="";
+			}
+			//判断是否过关
+			if(that.hasCompleted()){alert("恭喜你，/n过关了！");}
+		}
+		judgeSide(top,"t");
+		judgeSide(down,"d");
+		judgeSide(left,"l");
+		judgeSide(right,"r");
+	},
+	//得到下一步的方向  供move调用
+	getSibiling:function(index,side){
+		var nextIndex=-1;
+		switch(side){
+			case "t":
+			nextIndex=(index-3)>=0?index-3:-1;
+			break;
+			case "d":
+			nextIndex=(index+3)<=8?index+3:-1;
+			break;
+			case "l":
+			nextIndex=(index%3!=0)?index-1:-1;
+			break;
+			case "r":
+			nextIndex=(index%3!=2)?index+1:-1;
+			break;	
+		}
+		return nextIndex;
+	},
+	//判断是否可以移动 供move调用
+	isMoveable:function(index){
+		var that=this;
+		return that.arrLi[index].style.background=="";
+	},
+	//判断是否完成游戏  供move调用
+	hasCompleted:function(){
+		for(var i=0,len=this.arrLi.length;i<len;i++){
+			if(this.arrLi[i].getAttribute("myValue")!=i){
+				return false;	
+			}
+			return true;	
+		}
+	}
+	
+}
+game.init("container");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
