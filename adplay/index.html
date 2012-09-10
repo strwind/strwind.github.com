@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自动轮播广告（面向对象版）</title>
+<style>
+*{margin: 0; padding: 0;}
+ul{list-style:none;}
+.box{width:490px; height:170px; margin:10px auto; position:relative; border-radius:5px; border:5px solid yellow;}
+.list{width:490px; height:170px; position:relative;overflow:hidden;}
+.imgBox{position:absolute;}
+.imgBox li{height:170px;}
+.btnBox{position:absolute; right:5px; bottom:5px;}
+.btnBox li{float:left;}
+.btnBox a{padding:2px 8px; margin:5px; border-radius: 10px;background:#FF9900; color:white; cursor:pointer;}
+.btnBox .aHover{background:white; color:#FF9900;}
+</style>
+</head>
+<body>
+<div id="box" class="box">
+    <div class="list">
+        <ul class="imgBox">
+            <li><img src="01-1.jpg"  width="490" height="170" /></li>
+            <li><img src="02-1.jpg"  width="490" height="170" /></li>
+            <li><img src="03-1.jpg"  width="490" height="170" /></li>
+            <li><img src="04-1.jpg"  width="490" height="170" /></li>
+            <li><img src="05-1.jpg"  width="490" height="170" /></li>
+        </ul>
+        <ul class="btnBox">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="box2" class="box">
+    <div class="list">
+        <ul class="imgBox">
+            <li><img src="01-1.jpg"  width="490" height="170" /></li>
+            <li><img src="02-1.jpg"  width="490" height="170" /></li>
+            <li><img src="03-1.jpg"  width="490" height="170" /></li>
+            <li><img src="04-1.jpg"  width="490" height="170" /></li>
+            <li><img src="05-1.jpg"  width="490" height="170" /></li>
+        </ul>
+        <ul class="btnBox">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+function AutoMove(obj){
+    this.init(obj);
+}
+AutoMove.prototype = {
+    init: function(obj){
+        //参数替换
+        this.id = obj.id;
+        this.time = obj.time;
+        this.ease = obj.ease;
+        //变量定义
+        this.easeTimer = null;
+        this.tabTimer = null;
+        this.index = 0;
+        //dom控件绑定
+        this.box = document.getElementById(this.id);
+        this.imgBox = this.box.getElementsByTagName("ul")[0];
+        this.btnBox = this.box.getElementsByTagName("ul")[1];
+        this.btnArr = this.btnBox.getElementsByTagName("a");
+        this.imgArr = this.imgBox.getElementsByTagName("img");
+        //绑定事件
+        this.bindEvent(this.time, this.ease);
+    },
+    
+    //单张缓动移动
+    singleMove: function(index){
+        var that = this;
+        var height = -(index * this.imgArr[0].offsetHeight);
+        //要先清除上一次
+        clearInterval(that.easeTimer);
+        that.easeTimer = setInterval(function(){
+            that.pxMove(height);
+        },30);
+    },
+    //每30毫秒移动的像素,直到速度为0停止
+    pxMove:function(height){
+        var speed = (height - this.imgBox.offsetTop)/10;
+        //这个算法很精妙  保证绝对值最大； 
+        //只要speed有值，就说明偏移和高度还不相等，就不能停止移动，所以绝对值均向上取整
+        speed = speed > 0 ?  Math.ceil(speed) : Math.floor(speed);
+        height == this.imgBox.offsetTop && 
+                    clearInterval(this.easeTimer);
+        this.imgBox.style.top = this.imgBox.offsetTop + speed + "px";
+        //console.log(speed);
+    },
+    
+    //切换到下一张
+    next: function(ease){
+       var that = this;
+       
+       //参数是判断是否采用缓动
+       if(ease){
+           that.singleMove(that.index);
+           that.aHover(that.index);
+       }else{
+           that.imgBox.style.top = - that.index * this.imgArr[0].offsetHeight + "px";
+           that.aHover(that.index);
+       }
+       //console.log(that.index);
+        //图片轮回
+        if(that.index >= that.imgArr.length - 1) {
+            that.index = 0;
+        }else{
+            that.index ++ ;
+        }
+     },
+     
+     aHover: function(index){
+         var that = this,
+             i = 0,
+             len = that.btnArr.length;
+         for(i=0; i<len; i++){
+             that.btnArr[i].className = "";
+         }
+         that.btnArr[index].className = "aHover";
+     },
+    
+     bindEvent: function(time, ease){
+        var that = this;
+        
+        //开始轮播
+        that.next(ease);
+        that.tabTimer = setInterval(function(){that.next(ease)}, time);
+        
+         //切换框上的事件   
+        that.box.onmouseover = function(){
+            clearInterval(that.tabTimer);
+        };
+        that.box.onmouseout = function(){
+            that.tabTimer = setInterval(function(){that.next(ease)}, time);
+        };
+        
+        // 按钮上的事件
+        that.btnBox.onmouseover = function(e){
+            var e = e || window.event;
+            var target = e.target || e.srcElement;
+            if(target.tagName == "A"){
+                var num = parseInt(target.firstChild.nodeValue);
+                  that.singleMove(num-1);
+                  that.aHover(num-1);
+            }
+        }
+    }
+    
+};
+
+var obj = new AutoMove({
+    id: "box",
+    time: 2000,
+    ease: true
+});
+var obj2 = new AutoMove({
+    id: "box2",
+    time: 2000,
+    ease: false
+});
+</script>
+
+
+
+
+</body>
+</html>

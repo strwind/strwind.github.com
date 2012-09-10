@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<title>倒计时</title>
+<style type="text/css">
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+.second{
+    margin: 100px auto;
+    width:53px;
+    height: 38px;
+    position:relative;
+}
+.top{
+    position: absolute;
+    width:53px;
+    height:38px;
+    overflow:hidden;
+}
+.bottom{
+    position: absolute;
+    width:53px;
+    height:38px;
+    top: 38px;
+    left:0;
+}
+</style>
+</head>
+<body>
+<div id="second" class="second">
+    
+</div>
+    
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    function CountDown(id){
+        this.id = id;
+        this.init()
+    }
+    CountDown.prototype = {
+        init: function(){           
+            this.create(this.id);
+        },
+        
+        create: function(id){        
+            for (var i = 0 ; i< 10; i++){
+                var img = '<img class="top" src="image/'+ i +'-top.png"/>'
+                    + '<img class="bottom" src="image/'+ i +'-bottom.png"/>';
+                $("#" + id).append(img)
+            }
+        },
+        
+        show: function(num){
+            if(num == 9){ num = -1}
+            //防止相邻的重复数字
+            if(this._num == num) {return;}
+            this._num = num;
+            //执行前设置
+            
+            //恢复到默认值
+            $("#" + this.id + " img").each(function(){
+                 $(this).css("z-index",0 );
+            });
+            $("#" + this.id + " .top").each(function(){
+                $(this).css({
+                "top":0,
+                "height":38
+                });  
+            });    
+            //上部 num在num+1下，通过top和height来控制显隐
+            $("#" + this.id + " .top").eq(num+1).css("z-index",2 );      
+            $("#" + this.id + " .top").eq(num).css("z-index",1);
+            //下部 num在num+1上，通过height来控制显隐
+            $("#" + this.id + " .bottom").eq(num+1).css("z-index",1);
+            $("#" + this.id + " .bottom").eq(num).css({
+                   "z-index":2 ,
+                   "height":0 
+                 } );           
+            
+           //执行时
+            $("#" + this.id + " .top").eq(num+1).animate({
+                "top":38,
+                "height":0
+            },"300");
+            $("#" + this.id + " .bottom").eq(num).delay(300).animate({
+                "height":38
+            },"300");
+            
+            //console.log(num);
+        }
+    }
+    var cd1 = new CountDown("second");
+    function factory(){      
+      var sec = new Date().getSeconds();
+      cd1.show(9 - sec%10);
+    }
+    factory();
+    setInterval(factory, 1000);
+});
+     
+</script>
+
+
+
+
+</body>
+</html>
