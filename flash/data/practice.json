@@ -1,0 +1,66 @@
+[
+    {
+        "icon": "image/practice/0.png",
+        "name": "外观和主题",
+        "children": [
+            { "icon": "image/practice/0-0.png", "name": "任务栏和[开始]菜单" },
+            { "icon": "image/practice/0-1.png", "name": "文件夹选项" },
+            { "icon": "image/practice/0-2.png", "name": "显示" }
+        ]
+    },
+    {
+        "icon": "image/practice/1.png",
+        "name": "打印机和其它硬件",
+        "children": [
+            { "icon": "image/practice/1-0.png", "name": "打印机和传真" },
+            { "icon": "image/practice/1-1.png", "name": "扫描仪和照相机" },
+            { "icon": "image/practice/1-2.png", "name": "鼠标" }
+        ]
+    },
+    {
+        "icon": "image/practice/2.png",
+        "name": "网络和Internet连接",
+        "children": [
+            { "icon": "image/practice/2-0.png", "name": "Internet选项" },
+            { "icon": "image/practice/2-1.png", "name": "Windows防火墙" },
+            { "icon": "image/practice/2-2.png", "name": "网络安装向导" },
+            { "icon": "image/practice/2-3.png", "name": "网络连接" },
+            { "icon": "image/practice/2-4.png", "name": "无线网络安装向导" }
+        ]
+    },
+    {
+        "icon": "image/practice/3.png",
+        "name": "用户帐户",
+        "children": [
+            { "icon": "image/practice/3-0.png", "name": "邮件" },
+            { "icon": "image/practice/3-1.png", "name": "用户帐户" }
+        ]
+    },
+    {
+        "icon": "image/practice/4.png",
+        "name": "添加/删除程序",
+        "children": [
+            { "icon": "image/practice/4-0.png", "name": "更改或删除程序" },
+            { "icon": "image/practice/4-1.png", "name": "添加新程序" },
+            { "icon": "image/practice/4-2.png", "name": "添加/删除Windows组件" },
+            { "icon": "image/practice/4-3.png", "name": "设定程序访问和默认值" }
+        ]
+    },
+    {
+        "icon": "image/practice/5.png",
+        "name": "日期、时间、语言和区域设置",
+        "children": [
+            { "icon": "image/practice/5-0.png", "name": "区域和语言选项" },
+            { "icon": "image/practice/5-1.png", "name": "日期和时间" }
+        ]
+    },
+    {
+        "icon": "image/practice/6.png",
+        "name": "声音、语音和音频设备",
+        "children": [
+            { "icon": "image/practice/6-0.png", "name": "语音" },
+            { "icon": "image/practice/6-1.png", "name": "便携媒体设备" },
+            { "icon": "image/practice/6-2.png", "name": "声音和音频设备" }
+        ]
+    }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "icon" : "image/1.jpg",
+    "icon" : "image/practice/1.jpg",
     "rightOption" : "B",
     "optionList": {
 	"optionA" : "选项A",
@@ -11,7 +11,7 @@
   },
 
    {
-    "icon" : "image/2.jpg",
+    "icon" : "image/practice/2.jpg",
     "rightOption" : "A",
     "optionList": {
 	"optionA" : "helloA",
@@ -22,7 +22,7 @@
   },
 
    {
-    "icon" : "image/3.jpg",
+    "icon" : "image/practice/3.jpg",
     "rightOption" : "C",
     "optionList": {
 	"optionA" : "神马A",
@@ -33,7 +33,7 @@
   },
 
     {
-    "icon" : "image/4.jpg",
+    "icon" : "image/practice/4.jpg",
     "rightOption" : "B",
     "optionList": {
 	"optionA" : "选项A",
@@ -44,7 +44,7 @@
   },
 
    {
-    "icon" : "image/5.jpg",
+    "icon" : "image/practice/5.jpg",
     "rightOption" : "A",
     "optionList": {
 	"optionA" : "helloA",
@@ -55,7 +55,7 @@
   },
 
    {
-    "icon" : "image/6.jpg",
+    "icon" : "image/practice/6.jpg",
     "rightOption" : "C",
     "optionList": {
 	"optionA" : "神马A",
@@ -66,7 +66,7 @@
   },
 
     {
-    "icon" : "image/7.jpg",
+    "icon" : "image/practice/7.jpg",
     "rightOption" : "B",
     "optionList": {
 	"optionA" : "选项A",
@@ -77,7 +77,7 @@
   },
 
    {
-    "icon" : "image/8.jpg",
+    "icon" : "image/practice/8.jpg",
     "rightOption" : "A",
     "optionList": {
 	"optionA" : "helloA",
@@ -88,7 +88,7 @@
   },
 
    {
-    "icon" : "image/9.jpg",
+    "icon" : "image/practice/9.jpg",
     "rightOption" : "C",
     "optionList": {
 	"optionA" : "神马A",

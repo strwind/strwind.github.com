@@ -1,48 +1,44 @@
-﻿package 
-{
-
+﻿package  {
+	
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
-	import Content;
-	import Practice;
-
-
-	public class project extends MovieClip
-	{
-
-
-		public function project()
-		{
+	import content;
+	import practice;
+	
+	
+	public class project extends MovieClip {
+		
+		
+		public function project() {
 			// constructor code
-			new Content(teacher);
-			new Practice(practice);
-
-			this.initShow();
-
-			this.bindEvent();
-
+			new practice(blackboard);
+			new content(teacher);
+			
+			initShow();
+			bindEvent();
 		}
-
+		
+		
 		private function initShow()
 		{
-			practice.visible = false;
+			blackboard.visible = false;
 			enter_btn.label = "课后习题";
 		}
 
 		private function bindEvent()
 		{
 			enter_btn.addEventListener(MouseEvent.CLICK, function(e){
-			   		if(practice.visible){
-					   practice.visible = false;
+			   		if(blackboard.visible){
+					   blackboard.visible = false;
 					   teacher.visible = true;
 					   enter_btn.label = "课后习题";
 					}else{
-					   practice.visible = true;
+					   blackboard.visible = true;
 					   teacher.visible = false;
 					   enter_btn.label = "教学内容";
 					}
 			   });
 		}
 	}
-
+	
 }
