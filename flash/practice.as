@@ -239,7 +239,8 @@
 				choices.push(choice.name);
 			}
 			// 打乱选项
-			choices.sort(function() { return Math.random() - 0.5; });
+			//choices.sort(function() { return Math.random() - 0.5; });
+			choices = sort(choices.slice(0));
 
 			var rightOption = ["A","B","C","D"][getIndex(rightChoice,choices)];
 			var img = actual.icon;
@@ -254,6 +255,17 @@
 			        }
 			    };
 
+		}
+		function sort(arr){
+			var len = arr.length;
+			var ran = Math.floor(Math.random()*len);
+			arr.push(arr.splice(ran, 1));
+			var ran2 = Math.floor(Math.random()*len);
+			arr.push(arr.splice(ran2, 1));
+			var ran3 = Math.floor(Math.random()*len);
+			arr.push(arr.splice(ran3, 1))
+			//trace(ran);
+			return arr;
 		}
 
 		function getIndex(val, arr)
