@@ -1,0 +1,138 @@
+[
+   [ 
+	{
+	    "img" : "zeroZero",
+	    "txt" : "任务栏和[开始]菜单" 
+	},
+	{
+	    "img" : "zeroOne",
+	    "txt" : "文件夹选项！" 
+	},
+	{
+	    "img" : "zeroTwo",
+	    "txt" : "显示！" 
+	},
+	{
+	    "img" : "zeroHome",
+	    "txt" : "外观和主题" 
+	}
+   ],
+    
+   [ 
+        {
+	    "img" : "oneZero",
+	    "txt" : "打印机和传真" 
+	},
+	{
+	    "img" : "oneOne",
+	    "txt" : "扫描仪和照相机" 
+	},
+	{
+	    "img" : "oneTwo",
+	    "txt" : "鼠标" 
+	},
+	{
+	    "img" : "oneHome",
+	    "txt" : "打印机和其它硬件" 
+	}
+   ],
+
+   [ 
+        {
+	    "img" : "twoZero",
+	    "txt" : "Internet选项" 
+	},
+	{
+	    "img" : "twoOne",
+	    "txt" : "Windows防火墙" 
+	},
+	{
+	    "img" : "twoTwo",
+	    "txt" : "网络安装向导" 
+	},
+	{
+	    "img" : "twoThree",
+	    "txt" : "网络连接" 
+	},
+	{
+	    "img" : "twoFour",
+	    "txt" : "无线网络安装向导" 
+	},
+	{
+	    "img" : "twoHome",
+	    "txt" : "网络和Internet连接" 
+	}
+   ],
+
+   [ 
+        {
+	    "img" : "threeZero",
+	    "txt" : "邮件" 
+	},
+	{
+	    "img" : "threeOne",
+	    "txt" : "用户帐户" 
+	},
+	{
+	    "img" : "threeHome",
+	    "txt" : "用户帐户" 
+	}
+   ],
+
+      [ 
+        {
+	    "img" : "fourZero",
+	    "txt" : "更改或删除程序" 
+	},
+	{
+	    "img" : "fourOne",
+	    "txt" : "添加新程序" 
+	},
+	{
+	    "img" : "fourTwo",
+	    "txt" : "添加/删除Windows组件" 
+	},
+	{
+	    "img" : "fourThree",
+	    "txt" : "设定程序访问和默认值" 
+	},
+	{
+	    "img" : "fourHome",
+	    "txt" : "添加/删除程序" 
+	}
+   ],
+   [ 
+        {
+	    "img" : "fiveZero",
+	    "txt" : "区域和语言选项" 
+	},
+	{
+	    "img" : "fiveOne",
+	    "txt" : "日期和时间" 
+	},
+	{
+	    "img" : "fiveHome",
+	    "txt" : "日期、时间、语言和区域设置" 
+	}
+   ],
+   [ 
+        {
+	    "img" : "sixZero",
+	    "txt" : "语音" 
+	},
+	{
+	    "img" : "sixOne",
+	    "txt" : "便携媒体设备" 
+	},
+	{
+	    "img" : "sixTwo",
+	    "txt" : "声音和音频设备" 
+	},
+	{
+	    "img" : "sixHome",
+	    "txt" : "声音、语音和音频设备" 
+	}
+   ]
+]
+
+ 
