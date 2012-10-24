@@ -19,16 +19,16 @@
 		{
 			this.dataAll = JSON.decode(ContentLoader.ins.getJson("data"));
 			
-			init(teacher.screen0,380,300);
-			init(teacher.screen1,380,300);
+			init(teacher.screen0,360,300);
+			init(teacher.screen1,360,300);
 			init(teacher.screen2,380,300);
 			init(teacher.screen3,380,300);
 			init(teacher.screen4,380,300);
 			init(teacher.screen5,380,300);
-			init(teacher.screen6,380,300);
+			init(teacher.screen6,360,300);
 		}
 
-		public function init(screen:MovieClip,x:int,y:int)
+		public function init(screen:MovieClip, targetX, targetY)
 		{
 			this.screen = screen;
 			
@@ -36,7 +36,7 @@
 			
 			this.parse(screen, this.dataAll);
 	
-			this.bindEvent( x, y);
+			this.bindEvent( targetX, targetY);
 		}
 		
 		private function initStatus(node){
@@ -117,31 +117,35 @@
 		}
 
 
-		private function bindEvent(x, y)
+		private function bindEvent(targetX,targetY)
 		{
 			var mc = this.screen;
-			mc.bx = mc.x;
-			mc.by = mc.y;
+			//screen到达目的地的坐标
+			mc.targetX = targetX;
+			mc.targetY = targetY;
+			//screen的初始坐标
+			mc.initX = mc.x;
+			mc.initY = mc.y;
 			//绑定第一层按钮的事件
 			mc.home.btn.addEventListener(MouseEvent.CLICK,function(e:MouseEvent){
 			//先收起展示的mc,再展开点击的mc
 			    if(CLICKED && CLICKED != mc){
 			         //trace(CLICKED.name);
-			         moveBack( x, y, CLICKED, CLICKED.bx, CLICKED.by, function(){
+			         moveBack(CLICKED, CLICKED.initX, CLICKED.initY, function(){
 			             CLICKED = mc;
-			             moveGo( x, y,mc);
+			             moveGo( mc.targetX, mc.targetY, mc);
 			         });
 			        return;
 			    };
 			
 			  //trace(mc.y);
 			  //通过判断screen的y坐标的变化来判断它是否被点击，因为动画回去的y坐标小数点后有出入，所有改判断为差值
-			   if(mc.y - mc.by > 1){
+			   if(mc.y - mc.initY > 1){
 			         CLICKED = null;
-			         moveBack( x, y, mc, mc.bx, mc.by, null);
+			         moveBack( mc, mc.initX, mc.initY, null);
 			   }else{
 			         CLICKED = mc;
-			         moveGo( x, y,mc);
+			         moveGo( mc.targetX, mc.targetY, mc);
 			   }
 			 });
 
@@ -165,24 +169,16 @@
 
 		}
 		
-		public function back(node,nodeChild,x,y)
-		{
-			node.home.txt.alpha = 0;
-			nodeChild.x = nodeChild.bx;
-			nodeChild.y = nodeChild.by;
-			TweenLite.to(node,0.5,{x:x,y:y,alpha:1,ease:Cubic.easeOut});
 
-		}
-
-		public function moveGo(x,y,node)
+		public function moveGo(targetX, targetY, node)
 		{
-			TweenLite.to(node,1,{x:x,y:y,alpha:1,ease:Cubic.easeOut,onComplete:showChildEase,onCompleteParams:[node]});
+			TweenLite.to(node,1,{x:targetX, y:targetY, ease:Cubic.easeOut, onComplete:showChildEase, onCompleteParams:[node]});
 		}
 
 
-		public function moveBack(x,y,node,bx,by, callback)
+		public function moveBack(node, initX, initY, callback)
 		{
-			TweenLite.to(node,0.5,{x:x,y:y,alpha:1,ease:Cubic.easeOut,onStart:hideChildEase,onStartParams:[node,bx,by], onComplete:callback});
+			TweenLite.to(node,0.5,{onStart:hideChildEase,onStartParams:[node, initX, initY], onComplete:callback});
 			hideChildTxt(node);
 		}
 
@@ -207,12 +203,12 @@
 				}
 				//trace(nodeChild.name);
 				//trace(addX);
-				TweenLite.to(nodeChild,1,{x:nodeChild.bx + addX,y:nodeChild.by + addY,alpha:1,ease:Cubic.easeOut});
+				TweenLite.to(nodeChild,1,{x:nodeChild.bx + addX ,y:nodeChild.by + addY, alpha:1, ease:Cubic.easeOut});
 			}
 		}
 
 		//缓动收起mc的子元件
-		public function hideChildEase(node,bx,by)
+		public function hideChildEase(node, initX, initY)
 		{
 			var num:int = node.numChildren;
 			var nodeChild;
@@ -221,9 +217,20 @@
 			{
 				var addX = pos[i][0],addY = pos[i][1];
 				nodeChild = node.getChildAt(i);
-				TweenLite.to(nodeChild,0.5,{x:nodeChild.x - addX,y:nodeChild.y - addY,alpha:0,ease:Cubic.easeOut,onComplete:back,onCompleteParams:[node,nodeChild,bx,by]});
+				TweenLite.to(nodeChild,0.5,{x:nodeChild.x-addX, y:nodeChild.y-addY, alpha:0, ease:Cubic.easeOut, onComplete:back, onCompleteParams:[node, nodeChild, initX, initY]});
 			}
 		}
+		
+		public function back(node, nodeChild, initX, initY)
+		{
+			node.home.txt.alpha = 0;
+			nodeChild.x = nodeChild.bx;
+			nodeChild.y = nodeChild.by;
+			TweenLite.to(node,0.5,{x:initX, y:initY, ease:Cubic.easeOut});
+
+		}
+		
+		
 		private function getPosArr(num){
 			var posArr = [];
 			switch (num){
@@ -237,7 +244,7 @@
 					posArr = [[0,-120],[120,0],[0,120],[-120,0]];
 					break;
 				case 5:
-					posArr = [[-100,-90],[0,-100],[100,0],[-10,100],[-100,0]];
+					posArr = [[-90,-100],[20,-110],[120,20],[-10,100],[-120,20]];
 					break;
 				default:
 				    posArr = [[-200,-90],[0,-200],[200,0],[0,200],[-200,0]];
