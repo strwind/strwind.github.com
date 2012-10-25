@@ -19,13 +19,13 @@
 		{
 			this.dataAll = JSON.decode(ContentLoader.ins.getJson("data"));
 			
-			init(teacher.screen0,360,300);
-			init(teacher.screen1,360,300);
+			init(teacher.screen0,380,300);
+			init(teacher.screen1,380,300);
 			init(teacher.screen2,380,300);
 			init(teacher.screen3,380,300);
 			init(teacher.screen4,380,300);
 			init(teacher.screen5,380,300);
-			init(teacher.screen6,360,300);
+			init(teacher.screen6,380,300);
 		}
 
 		public function init(screen:MovieClip, targetX, targetY)
@@ -238,7 +238,7 @@
 					posArr = [[0,-120],[120,0]];
 					break;
 				case 3:
-					posArr = [[-40,-80],[40,-80],[0,80]];
+					posArr = [[-110,-100],[110,-100],[0,100]];
 					break;
 				case 4:
 					posArr = [[0,-120],[120,0],[0,120],[-120,0]];

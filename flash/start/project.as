@@ -1,5 +1,6 @@
 ﻿package  {
-	
+	import flash.display.StageScaleMode
+	import flash.display.StageDisplayState;
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	import content;
@@ -10,6 +11,9 @@
 		
 		
 		public function project() {
+			//禁止缩放
+			stage.scaleMode= StageScaleMode.NO_SCALE;
+
 			// constructor code
 			new practice(blackboard);
 			new content(teacher);
