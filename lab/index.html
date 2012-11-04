@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title> New Document </title>
+<meta charset="utf-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<style type="text/css">
+.container{
+    position:relative;
+    margin: 30px auto;
+    width:800px;
+    height:220px;
+    border: 1px solid black;
+}
+.rect{
+    position:absolute;
+    top:200px;
+    width:20px;
+    height:20px;
+    background: red;
+}    
+</style>
+</head>
+
+<body>
+<div id="container" class="container">
+    <div id="rect" class="rect"></div>
+</div>
+<script>
+var container = document.getElementById("container");
+var rect = document.getElementById("rect");
+
+rect.style.left = "0px";
+rect.style.top = "200px";
+
+var left = parseInt(rect.style.left);
+var maxLeft = container.offsetWidth - rect.offsetWidth;
+var stepLeft = 2;
+
+var top = parseInt(rect.style.top);
+var minTop = top - 100;
+var stepTop = 2;
+var timer;
+
+function toRight(){
+    if(left >= maxLeft || left < 0){
+        stepLeft = - stepLeft;
+    }
+    left += stepLeft;
+    rect.style.left = left + "px";
+}
+
+
+function toTop(){
+   if(top <= minTop || top > 200){
+       stepTop = - stepTop;
+   }
+   top -= stepTop;
+   rect.style.top = top + 'px';
+}
+setInterval(toRight, 10);
+
+function jump(e){
+    var e = e || window.event,
+        target = e.target || e.srcElement;
+    if(e.keyCode === 32){
+        if(!timer){
+            timer = setInterval(toTop, 5);
+        }
+    }
+}
+document.addEventListener("keydown",jump, false);
+</script>
+
+
+
+
+
+</body>
+</html>
