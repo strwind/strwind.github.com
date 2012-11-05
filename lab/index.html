@@ -17,6 +17,7 @@
 .rect{
     position:absolute;
     top:200px;
+    left:0;
     width:20px;
     height:20px;
     background: red;
@@ -32,46 +33,47 @@
 var container = document.getElementById("container");
 var rect = document.getElementById("rect");
 
-rect.style.left = "0px";
-rect.style.top = "200px";
 
-var left = parseInt(rect.style.left);
 var maxLeft = container.offsetWidth - rect.offsetWidth;
 var stepLeft = 2;
 
-var top = parseInt(rect.style.top);
-var minTop = top - 100;
 var stepTop = 2;
-var timer;
+var minTop = rect.offsetTop - 100;
+var timer = null;
+var DOWN = false;
 
 function toRight(){
-    if(left >= maxLeft || left < 0){
+    if(rect.offsetLeft >= maxLeft || rect.offsetLeft < 0){
         stepLeft = - stepLeft;
     }
-    left += stepLeft;
-    rect.style.left = left + "px";
+    rect.style.left = rect.offsetLeft + stepLeft + "px";
 }
 
-
 function toTop(){
-   if(top <= minTop || top > 200){
-       stepTop = - stepTop;
+   if(rect.offsetTop <= minTop || rect.offsetTop >= 200){
+       if(DOWN){
+           stepTop = - stepTop;
+           DOWN = false;
+       }
    }
-   top -= stepTop;
-   rect.style.top = top + 'px';
+   rect.style.top = rect.offsetTop - stepTop + 'px';
+   DOWN = true;
+   if(rect.offsetTop == 200){
+       clearInterval(timer);
+       timer = null;
+   }
 }
 setInterval(toRight, 10);
 
 function jump(e){
     var e = e || window.event,
         target = e.target || e.srcElement;
-    if(e.keyCode === 32){
-        if(timer === undefined){
-            timer = setInterval(toTop, 5);
-        }
+    if(e.keyCode == 32 && timer == null){
+        timer = setInterval(toTop, 10);
     }
 }
 document.addEventListener("keydown",jump, false);
+
 </script>
 
 
