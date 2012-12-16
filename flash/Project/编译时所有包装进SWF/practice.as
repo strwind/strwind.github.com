@@ -32,7 +32,7 @@
 
 		private function initBlackboard(dataArr)
 		{
-			this.board.nextBtn.label = "重新出题";
+			this.board.nextBtn.label = "下一题";
 			this.board.tip.visible = false;
 
 			this.bindNextBtnEvent(dataArr);
