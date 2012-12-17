@@ -1,4 +1,4 @@
-package  
+﻿package  
 {
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
@@ -11,7 +11,7 @@ package
 	{
 		private var _flashId:String;			//Flash的ID
 		private var _jsName:String;				//JS的命名空间
-		
+		private var count:Number = 0;
 		public function ASJS() 
 		{
 			initShow();
@@ -22,8 +22,7 @@ package
 		
 		public function initShow() {
 			stage.scaleMode = "noScale";
-			aj.label = "AS→JS";
-			ja.label = "JS→AS";
+			aj.label = "AS调用JS";
 			output.text = "此处显示";
 		}
 		
@@ -35,22 +34,19 @@ package
 		
 		private function bindEvent() {
 			aj.addEventListener(MouseEvent.CLICK, ajHandler);
-			//ja.addEventListener(MouseEvent.CLICK, jaHandler);
 		}
 		
 		public  function provide() {
-			ExternalInterface.addCallback("jaClick", jaHandler);
+			ExternalInterface.available && ExternalInterface.addCallback("jaClick", jaHandler);
 		}
 			
 		public function ajHandler(e:MouseEvent) {
-			ExternalInterface.call("ajClick", _flashId);
-			
-			//output.text = "AS 调用了 JS ";
-			
+			var fnName:String = _jsName + "ajClick";
+			trace(fnName);
+			ExternalInterface.available && ExternalInterface.call(fnName, _flashId);
 		}
-		public function jaHandler(e:MouseEvent) {
-			
-			output.text = "JS 调用了 AS ";
+		public function jaHandler() {
+			output.text = "JS 调用了 AS " + ++count + "次";
 		} 
 		
 	}
