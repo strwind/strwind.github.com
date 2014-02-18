@@ -45,7 +45,7 @@
                             }
                         }
                         var K = {position: "absolute",zIndex: "10000000",opacity: n,width: (y + "px"),height: (y + "px")};
-                        H.src = "http://www.baidu.com/aladdin/img/weather4_twoicon/snowflake" + I + ".png";
+                        H.src = "img/snowflake" + I + ".png";
                         for (var J in K) {
                             if (K.hasOwnProperty(J)) {
                                 H.style[J] = K[J]
