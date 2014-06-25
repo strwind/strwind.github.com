@@ -1,0 +1,42 @@
+#cart-list {
+    width: 100%;
+}
+#product-column {
+    width: 180px;
+}
+#price-column {
+    width: 160px;
+    text-align: center;
+}
+#count-column {
+    width: 160px;
+    text-align: center;
+}
+#cart-list .name {
+    vertical-align: top;
+}
+#cart-list .price::before {
+    content: "￥";
+}
+#cart-list .plus,
+#cart-list .minus {
+    border: 1px solid #dadada;
+    padding: 0 3px;    
+    cursor: pointer;
+}
+#cart-list .plus:hover,
+#cart-list .minus:hover {
+    background-color: #ffdd99; 
+}
+#cart-list .minus{
+    margin-right: 8px;
+}
+#cart-list .plus{
+    margin-left: 8px;
+}
+#total-price {
+    font-weight: bold;
+}
+#total-price::before {
+    content: "￥";
+}
