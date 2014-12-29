@@ -6,8 +6,8 @@ define(function (require) {
     var Ball = require('./Ball');
     var Char = require('./Char');
     
-    var WINDOW_WIDTH = document.body.clientWidth;
-    var WINDOW_HEIGHT = document.body.clientHeight - 100;
+    var WINDOW_WIDTH = window.innerWidth;
+    var WINDOW_HEIGHT = window.innerHeight;
     var MARGIN_LEFT = Math.round(WINDOW_WIDTH / 10);
     var RADIUS = Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1;
     var MARGIN_TOP = Math.round(WINDOW_HEIGHT / 5);
