@@ -14,10 +14,10 @@
     <script src="dep/esl.js"></script>
     <script>
         require.config({
-            baseUrl: '/src',
+            baseUrl: 'src',
             paths: {
-                dep: '/dep',
-                u: '/dep/underscore'
+                dep: '../dep',
+                u: '../dep/underscore'
             }
         });
         require(['main'], function (main) {
