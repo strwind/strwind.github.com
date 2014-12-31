@@ -12,7 +12,7 @@ define(function (require) {
         var RADIUS = Math.round(WINDOW_WIDTH * (1 / 5) / 22) - 1; // 字符由22个小球半径组成， 为了小球间的留白，格子的间距留1
     }
     else {
-        var MARGIN_LEFT = Math.round(WINDOW_WIDTH * (1 / 4)); // 把屏幕划分为3份
+        var MARGIN_LEFT = Math.round(WINDOW_WIDTH * (1 / 4)); // 把屏幕划分为4份
         var RADIUS = Math.round(WINDOW_WIDTH * (1 / 2) / 22) - 1; // 字符由22个小球半径组成， 为了小球间的留白，格子的间距留1
     }
     var MARGIN_TOP = Math.round((WINDOW_HEIGHT - 26 * (RADIUS + 1)) / 3);

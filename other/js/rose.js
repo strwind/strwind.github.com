@@ -7,7 +7,7 @@ document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
 // start of submission //
 with (m = Math)
     C = cos, S = sin, P = pow, R = random;
-c.width = c.height = f = 500;
+c.width = c.height = f = 600;
 h = -250;
 function p(a, b, c) {
     if (c > 60)
