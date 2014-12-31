@@ -18,7 +18,7 @@ define(function (require) {
     var MARGIN_TOP = Math.round((WINDOW_HEIGHT - 26 * (RADIUS + 1)) / 3);
     var COLORS = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"];
     var startTime = new Date().getTime();
-    var numberIndex = -3;
+    var numberIndex = -2;
     //var numberIndex = parseInt(location.search.slice(1), 10);
     var single = {
         /**
