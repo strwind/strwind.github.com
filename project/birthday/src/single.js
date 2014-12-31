@@ -90,13 +90,11 @@ define(function (require) {
          */
         animate: function () {
             var me = this;
-			function move() {
-				me.update();
+            me.timer = setInterval(function () {
+                me.update();
                 me.render();
                 me.renderColorBalls();
-				requestAnimationFrame(move);
-			}
-			move();
+            }, 30);
         },
         
         /**
