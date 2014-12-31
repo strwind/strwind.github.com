@@ -8,12 +8,18 @@
         body { margin: 0; padding: 0; height: 100%;background:black; }
         canvas { display: block; }
         .opui-snow-btn { position: absolute; right: 10px; top: 23px; z-index: 10000000; }
+        .hide{display:none;}
     </style>
 </head>
 <body>
     <canvas id="canvas">
         当前浏览器不支持Canvas，请更换浏览器后再试
     </canvas>
+    <img src="img/snowflake1.png" class="hide"/>
+    <img src="img/snowflake2.png" class="hide"/>
+    <img src="img/snowflake3.png" class="hide"/>
+    <img src="img/snowflake4.png" class="hide"/>
+    
     <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-8/esl.min.js"></script>
     <script>
         require.config({
@@ -24,7 +30,9 @@
                 zepto: '../dep/zepto.min'
             }
         });
-        require(['main']);
+        window.onload = function () {
+            require(['main']);
+        };
     </script>
 </body>
 </html>
