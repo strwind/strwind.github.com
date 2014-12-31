@@ -73,7 +73,7 @@ define(function (require) {
          */
         update: function () {
             var nowTime = new Date().getTime();
-            if (nowTime - startTime >= 1000) {
+            if (nowTime - startTime >= 2000) {
                 startTime = nowTime;
                 //添加颜色球
                 numberIndex++;
