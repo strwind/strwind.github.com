@@ -9,10 +9,10 @@ define(function (require) {
     var WINDOW_HEIGHT = window.innerHeight;
     var MARGIN_LEFT = Math.round(WINDOW_WIDTH * (2 / 5)); // 把屏幕划分为5份
     var RADIUS = Math.round(WINDOW_WIDTH * (1 / 5) / 14) - 1; // 字符由14个小球半径组成， 为了小球间的留白，格子的间距留1
-    var MARGIN_TOP = Math.round((WINDOW_HEIGHT - 20 * (RADIUS + 1)) / 2);
+    var MARGIN_TOP = Math.round((WINDOW_HEIGHT - 20 * (RADIUS + 1)) / 3);
     var COLORS = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"];
     var startTime = new Date().getTime();
-    var numberIndex = 15;
+    var numberIndex = 10;
     var single = {
         /**
          * 初始入口 
@@ -105,10 +105,12 @@ define(function (require) {
                         'cxt': this.cxt,
                         'x': x + j * 2 * (RADIUS + 1) + (RADIUS + 1),
                         'y': y + i * 2 * (RADIUS + 1) + (RADIUS + 1),
+                        // y方向的运动坐标长度绝对值
+                        'pathY': y + i * 2 * (RADIUS + 1) + (RADIUS + 1),
                         'r': RADIUS,
-                        'g': 1.5 + Math.random(),
-                        'vx': Math.pow( -1 , Math.ceil(Math.random() * 1000)) * 4,
-                        'vy': -10,
+                        'g': 0.8 + Math.random(),
+                        'vx': Math.pow( -1 , Math.ceil(Math.random() * 1000)),
+                        'vy': -5,
                         'color': COLORS[Math.floor(Math.random() * COLORS.length)]
                     };
                     var ball = new Ball(option);
@@ -122,19 +124,26 @@ define(function (require) {
          */
         updateColorBalls: function () {
             u.each(this.balls, function (ball) {
-                ball.x += ball.vx;
-                /*
-                var c = 1.0;
-                if( ball.y + RADIUS + ball.vy >= WINDOW_HEIGHT ){
-                    c = ( WINDOW_HEIGHT - (ball.y+ RADIUS) ) / ball.vy;
-                    console.log( c );   
+                if (ball.pathY >= WINDOW_HEIGHT-RADIUS) {
+                    ball.x += ball.vx;
+                    //判断方向
+                    if (ball.vx >= 0) {
+                        ball.vx += 0.1; 
+                    }
+                    else {
+                        ball.vx -= 0.1; 
+                    }
+                    ball.vy += ball.g;
                 }
-                */  
+                else {
+                    ball.vy += 1;
+                }
+                //y方向的运动坐标长度绝对值
+                ball.pathY = ball.pathY + Math.abs(ball.vy);
                 ball.y += ball.vy;
-                ball.vy += ball.g;
-                //ball.vy += c * ball.g;
-        
-                if( ball.y >= WINDOW_HEIGHT-RADIUS ){
+                
+                //反弹效果
+                if( ball.y >= WINDOW_HEIGHT-RADIUS){
                     ball.y = WINDOW_HEIGHT-RADIUS;
                     ball.vy = -Math.abs(ball.vy) * 0.75;
                 }
