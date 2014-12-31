@@ -1,6 +1,6 @@
 
 define(function (require) {
-    var $ = require('jquery');
+    var $ = require('zepto');
     var A = {};
     A.ui = {};
     A.ui.snow = function(b) {

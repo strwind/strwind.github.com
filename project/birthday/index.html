@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
-    <title>倒计时</title>
+    <title>Bless You</title>
     <style>
         body { margin: 0; padding: 0; height: 100%;background:black; }
         canvas { display: block; }
@@ -14,14 +14,14 @@
     <canvas id="canvas">
         当前浏览器不支持Canvas，请更换浏览器后再试
     </canvas>
-    <script src="dep/esl.js"></script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-8/esl.min.js"></script>
     <script>
         require.config({
             baseUrl: 'src',
             paths: {
                 dep: '../dep',
                 u: '../dep/underscore',
-                jquery: '../dep/jquery-1.11.0'
+                zepto: '../dep/zepto.min'
             }
         });
         require(['main']);

@@ -7,12 +7,19 @@ define(function (require) {
     
     var WINDOW_WIDTH = window.innerWidth;
     var WINDOW_HEIGHT = window.innerHeight;
-    var MARGIN_LEFT = Math.round(WINDOW_WIDTH * (2 / 5)); // 把屏幕划分为5份
-    var RADIUS = Math.round(WINDOW_WIDTH * (1 / 5) / 14) - 1; // 字符由14个小球半径组成， 为了小球间的留白，格子的间距留1
-    var MARGIN_TOP = Math.round((WINDOW_HEIGHT - 20 * (RADIUS + 1)) / 3);
+    if (WINDOW_WIDTH > 800) {
+        var MARGIN_LEFT = Math.round(WINDOW_WIDTH * (2 / 5)); // 把屏幕划分为5份
+        var RADIUS = Math.round(WINDOW_WIDTH * (1 / 5) / 22) - 1; // 字符由22个小球半径组成， 为了小球间的留白，格子的间距留1
+    }
+    else {
+        var MARGIN_LEFT = Math.round(WINDOW_WIDTH * (1 / 4)); // 把屏幕划分为3份
+        var RADIUS = Math.round(WINDOW_WIDTH * (1 / 2) / 22) - 1; // 字符由22个小球半径组成， 为了小球间的留白，格子的间距留1
+    }
+    var MARGIN_TOP = Math.round((WINDOW_HEIGHT - 26 * (RADIUS + 1)) / 3);
     var COLORS = ["#33B5E5","#0099CC","#AA66CC","#9933CC","#99CC00","#669900","#FFBB33","#FF8800","#FF4444","#CC0000"];
     var startTime = new Date().getTime();
-    var numberIndex = 10;
+    var numberIndex = -3;
+    //var numberIndex = parseInt(location.search.slice(1), 10);
     var single = {
         /**
          * 初始入口 
@@ -32,6 +39,7 @@ define(function (require) {
         enterDocument: function () {
             this.canvas.width = WINDOW_WIDTH;
             this.canvas.height = WINDOW_HEIGHT;
+            this.addColorBalls(MARGIN_LEFT + 0 , MARGIN_TOP, numberIndex)
         },
 
         /**
@@ -67,11 +75,11 @@ define(function (require) {
             var nowTime = new Date().getTime();
             if (nowTime - startTime >= 1000) {
                 startTime = nowTime;
-                numberIndex--;
-                if (numberIndex < 0) {
-                    numberIndex = 9;
-                }
                 //添加颜色球
+                numberIndex++;
+                if (numberIndex >= digit.length) {
+                    numberIndex = 0;
+                }
                 this.addColorBalls(MARGIN_LEFT + 0 , MARGIN_TOP, numberIndex);
             }
             this.updateColorBalls();
