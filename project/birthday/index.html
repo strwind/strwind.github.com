@@ -7,17 +7,16 @@
     <title>Bless You</title>
     <style>
         body { margin: 0; padding: 0; height: 100%;background:black; }
-        canvas { display: block; }
+        canvas { display: block; position: absolute; }
         .opui-snow-btn { position: absolute; right: 10px; top: 23px; z-index: 10000000; }
-        .hide{display:none;}
-        .hidden {visibility: hidden; position: absolute; top:0; left:0}
+        .hide { display:none;}
     </style>
 </head>
 <body>
     <canvas id="canvas">
         当前浏览器不支持Canvas，请更换浏览器后再试
     </canvas>
-    <img src="img/person.jpg" class="hidden">
+    <img src="img/person.jpg" width="0" height="0">
     <img src="img/snowflake1.png" class="hide"/>
     <img src="img/snowflake2.png" class="hide"/>
     <img src="img/snowflake3.png" class="hide"/>
