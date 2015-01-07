@@ -3,9 +3,6 @@
 var closelist = [];
 //开发列表
 var openlist = [];
-var gw = 10;
-var gh = 10;
-var gwh = 14;
 //起始点
 var p_start = new Array(2);
 //终点
@@ -39,12 +36,7 @@ function GetF(arr) {
             || !IsInTurn([x, y])) {
             continue;
         }
-        if ((x - s_path[3][0]) * (y - s_path[3][1]) !== 0) {
-            G = s_path[1] + gwh;
-        } 
-        else {
-            G = s_path[1] + gw;
-        } 
+        G = s_path[1];
         if (InOpen([x, y])) {
             if (G < openlist[num][1]) {
                 openlist[num][0] = (G + openlist[num][2]);
@@ -54,7 +46,7 @@ function GetF(arr) {
                 G = openlist[num][1];
             }
         } else {
-            H = (Math.abs(p_end[0] - x) + Math.abs(p_end[1] - y)) * gw;
+            H = Math.abs(p_end[0] - x) + Math.abs(p_end[1] - y);
             F = G + H;
             arr[i] = new Array();
             arr[i][0] = F;
@@ -164,10 +156,10 @@ function getPath() {
         }
         if (t[0] == p_start[0] && t[1] == p_start[1]) break;
     }
-    alert(str);
+    //alert(str);
 }
 function setPos() {
-    var h = (Math.abs(p_end[0] - p_start[0]) + Math.abs(p_end[1] - p_start[1])) * gw;
+    var h = Math.abs(p_end[0] - p_start[0]) + Math.abs(p_end[1] - p_start[1]);
     s_path = [h, 0, h, p_start, p_start];
 }
 function set(id, arr) {
