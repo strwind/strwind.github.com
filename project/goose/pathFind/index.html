@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>A*寻路算法</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <table id="maptt" cellspacing="1" cellpadding="0" border="0" bgcolor="#000000">
+    <script>
+    for(var i=0;i<h;i++){
+      document.write("<tr>");
+      for(var j=0;j<w;j++){
+        document.write('<td onclick="set(flag,['+j+','+i+']);" bgcolor="#ffffff" width="20" height="20"></td>');
+      }
+      document.write("</tr>");
+    }
+    </script>
+    </table>
+    <a href="javascript:setflag(1);">设置起点</a><br>
+    <a href='javascript:setflag(2);'>设置终点</a><br>
+    <a href='javascript:setflag(3);'>设置障碍点</a><br>
+    <input type="button" onclick="setPos();main();" value="find">
+    
+</body>
+</html>
