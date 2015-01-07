@@ -11,9 +11,9 @@ var p_end = new Array(2);
 var s_path, n_path = "";
 var num, bg, flag = 0;
 //x轴个数
-var w = 20;
+var w = 25;
 //y轴个数
-var h = 10;
+var h = 25;
 
 function GetRound(pos) {
     var arr = [];
