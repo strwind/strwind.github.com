@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>five</title>
+    <link href="src/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas" width="640" height="640">
+            你的浏览器不支持canvas，请使用 chrome浏览器 打开.
+        </canvas>
+    </div>
+    <script src="dep/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: 'src/js'
+        });
+        require(['main'], function (main) {
+            main.init();
+        });
+    </script>
+</body>
+</html>
