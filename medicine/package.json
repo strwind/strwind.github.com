@@ -1,0 +1,17 @@
+{
+  "name": "medicine",
+  "description": "医药搜索",
+  "version": "0.0.1",
+  "keywords": [],
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-cssmin": "*",
+    "gulp-if": "*",
+    "gulp-less": "*",
+    "gulp-rename": "~1.2.2",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "~1.5.3",
+    "gulp-util": "*",
+    "gulp-watch": "*"
+  }
+}
