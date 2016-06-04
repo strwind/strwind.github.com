@@ -51,9 +51,12 @@ html, body {
     background: white;
     .display(flex);
     .flex-direction(row);
-    .justify-content(space-around);
+    .justify-content(flex-start);
     .flex-wrap(wrap);
     padding: 20px 0;
+    li {
+        margin: 0 5px 10px;
+    }
 }
 
 .common-recommend a, .common-recommend-item {
@@ -64,7 +67,6 @@ html, body {
     font-size: 14px;
     display: inline-block;
 }
-
 .common-column{
     .title {
         .display(flex);
