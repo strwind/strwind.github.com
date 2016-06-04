@@ -140,7 +140,7 @@ body {
 .common-serach-wrap {
   width: 100%;
   height: 50px;
-  background: url('../img/search-bg.png') repeat-x;
+  background: #363638;
   border-bottom: #478bf8 solid 2px;
 }
 .common-serach-wrap .search {
