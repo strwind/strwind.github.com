@@ -371,6 +371,7 @@ body {
 }
 .page1 .item2 {
   position: relative;
+  margin: 0 10px 20px;
 }
 .page1 .item2 .ad {
   width: 100%;
