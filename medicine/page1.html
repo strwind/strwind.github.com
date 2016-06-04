@@ -33,8 +33,34 @@
             </div>
             <div class="item2">
                 <h2 class="title">上海瑞金医院内分泌科蒋江教授谈糖尿病肾病综合症的危害与预防</h2>
-                <img class="ad" src="img/home-ad.png" alt="推荐" />
+                <div class="swiper-container swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active">
+                            <img class="ad" src="img/home-slide1.png" alt="推荐" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="ad" src="img/home-slide2.png" alt="推荐" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="ad" src="img/home-slide3.png" alt="推荐" />
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                        <span class="swiper-pagination-bullet"></span>
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="./lib/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                autoplay: 2500,
+                autoplayDisableOnInteraction: false
+            });
+        </script>
     </body>
 </html>
