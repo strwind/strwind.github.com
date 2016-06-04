@@ -1,16 +1,17 @@
-var gulp = require('gulp'),
-    watch = require('gulp-watch');
+var gulp = require('gulp');
+var less = require('gulp-less');
 
-gulp.task('stream', function () {
-    return gulp.src('css/**/*.css')
-        .pipe(watch('css/**/*.css'))
-        .pipe(gulp.dest('build'));
+gulp.task('css', ['clean'], function () {
+    return gulp.src(['less/main.less'])
+        .pipe(less())
+        .pipe(gulp.dest('css'));
 });
 
-gulp.task('callback', function (cb) {
-    watch('css/**/*.css', function () {
-        gulp.src('css/**/*.css')
-            .pipe(watch('css/**/*.css'))
-            .on('end', cb);
-    });
+gulp.task("watch", ["default"], function () {
+    isBuild = false;
+    gulp.watch(['less/*.less'], ["css"]);
 });
+gulp.task('clean', function (cb) {
+     cb && cb();
+});
+gulp.task('default', ['css']);

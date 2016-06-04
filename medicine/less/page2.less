@@ -17,7 +17,7 @@
         height: 50px;
     }
     .query {
-        flex: 1;
+        .flex(1);
         background: #363638;
         border: 1px solid #606061;
         border-radius: 3px;
@@ -29,7 +29,7 @@
         font-size: 16px;
     }
     .submit{
-        flex: none;
+        .flex(none);
         background: url('../img/search-icon.png') no-repeat;
         width: 22px;
         height: 22px;
@@ -43,7 +43,7 @@
         font-weight: bolder;
         line-height: 32px;
         display: flex;
-        align-items: center;
+        .align-items(center);
         background: #ededed;
     }
     .item1 .title-icon {
@@ -65,10 +65,10 @@
     }
     .item1 .recommend {
         background: white;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        .display(flex);
+        .flex-direction(row);
+        .justify-content(space-around);
+        .flex-wrap(wrap);
         padding: 20px 0;
     }
     
@@ -84,16 +84,16 @@
         
     }
     .item2 .title {
-        display: flex;
-        flex-direction: row;
+        .display(flex);
+        .flex-direction(row);
         padding: 25px 20px;
         background: #f8f8f8;
         line-height: 22px;
         border-bottom: #e8e8e8 solid 1px;
     }
     .item2 .title-head {
-        flex: 1;
-        display: flex;
+        .flex(1);
+        .display(flex);
     }
     .item2 .title-icon {
         display: inline-block;
@@ -104,9 +104,9 @@
         margin-right: 10px;
     }
     .item2 .title-more {
-        flex: none;
-        display: flex;
-        align-items: center;
+        .flex(none);
+        .display(flex);
+        .align-items(center);
         color: #6699f5;
     }
     .item2 .more-icon {
