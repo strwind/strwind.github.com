@@ -131,7 +131,11 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  margin-bottom: 40px;
   -webkit-overflow-scrolling: touch;
+}
+.container {
+  height: 100%;
 }
 .common-serach-wrap {
   width: 100%;
@@ -224,6 +228,7 @@ body {
   padding: 3px 8px;
   color: #9c9c9c;
   font-size: 14px;
+  display: inline-block;
 }
 .common-column .title {
   display: -moz-box;
@@ -267,7 +272,7 @@ body {
   display: inline-block;
   height: 22px;
   width: 20px;
-  background: url('../img/item2-title.png') no-repeat;
+  background: url('../img/page2-item2-title.png') no-repeat;
   background-size: 100%;
   margin-right: 10px;
 }
@@ -304,15 +309,14 @@ body {
   background-size: 100%;
   margin-left: 10px;
 }
-.common-column p a {
+.common-column .list li {
   padding: 20px;
   width: 100%;
   border-bottom: #e8e8e8 solid 1px;
-  color: #656565;
   display: inline-block;
 }
-.page2 .container {
-  height: 100%;
+.common-column .list li a {
+  color: #656565;
 }
 .page2 .item1 .title {
   padding: 20px;
@@ -332,7 +336,7 @@ body {
   display: inline-block;
   height: 22px;
   width: 20px;
-  background: url('../img/item1-title.png') no-repeat;
+  background: url('../img/page2-item1-title.png') no-repeat;
   background-size: 100%;
   margin-right: 10px;
 }
@@ -346,13 +350,31 @@ body {
   word-break: break-all;
 }
 .page2 .item3 .title-icon {
-  background: url('../img/item3-title.png') no-repeat;
+  background: url('../img/page2-item2-title.png') no-repeat;
   background-size: 100%;
 }
-.page2 .item4 {
-  margin-bottom: 40px;
+.page2 .item3 .title-icon {
+  background: url('../img/page2-item3-title.png') no-repeat;
+  background-size: 100%;
 }
 .page2 .item4 .title-icon {
-  background: url('../img/item4-title.png') no-repeat;
+  background: url('../img/page2-item4-title.png') no-repeat;
   background-size: 100%;
+}
+.page3 .item1 .title-icon {
+  background: url('../img/page3-item1-title.png') no-repeat;
+  background-size: 100%;
+}
+.page3 .item1 .common-recommend-item {
+  margin-top: 10px;
+  color: #9c9c9c;
+}
+.page3 .item2 .title-icon {
+  background: url('../img/page3-item2-title.png') no-repeat;
+  background-size: 100%;
+}
+.page3 .item2 .crumb {
+  color: #9d9d9d;
+  margin-top: 10px;
+  font-size: 14px;
 }
