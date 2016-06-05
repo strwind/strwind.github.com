@@ -340,7 +340,7 @@ body {
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  margin: 40px 0;
+  margin: 80px 0 40px;
 }
 .page1 .logo-wrap .logo {
   width: 40%;
