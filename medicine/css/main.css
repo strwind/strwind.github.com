@@ -247,7 +247,7 @@ body {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 25px 20px;
+  padding: 15px 20px;
   background: #f8f8f8;
   line-height: 22px;
   border-bottom: #e8e8e8 solid 1px;
@@ -317,7 +317,7 @@ body {
   display: inline-block;
 }
 .common-column .list li a {
-  color: #656565;
+  color: #333;
 }
 .page1 .logo-wrap {
   display: -moz-box;
