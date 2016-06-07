@@ -320,6 +320,7 @@ body {
   color: #333;
 }
 .page1 .logo-wrap {
+  position: relative;
   display: -moz-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -346,6 +347,7 @@ body {
   width: 40%;
 }
 .page1 .search-wrap {
+  position: relative;
   background: none;
   border-bottom: none;
 }
