@@ -124,13 +124,14 @@ html, body {
 }
 // 查看更多
 .common-auto-para {
-        overflow : hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-    }
-.common-auto-para-ellipsis {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     -webkit-line-clamp: 6;
+}
+.common-auto-para-inherit {
+    -webkit-line-clamp: inherit;
 }
 .common-auto-more-action {
     font-size: 12px;
