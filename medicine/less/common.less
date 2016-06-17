@@ -1,5 +1,16 @@
 
 /* common */
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 a {
     text-decoration:none;
 }
@@ -64,6 +75,7 @@ html, body {
     display: inline-block;
 }
 .common-column{
+    .clearfix();
     .title {
         .display(flex);
         .flex-direction(row);
@@ -108,5 +120,26 @@ html, body {
           margin: 0 20px;
           display: inline-block;
         }
+    }
+    .common-auto-para {
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    .common-auto-para-ellipsis {
+        -webkit-line-clamp: 6;
+    }
+    
+    .common-auto-para-inherit {
+        -webkit-line-clamp: inherit;
+    }
+    .more-action {
+        font-size: 12px;
+        color: #6699f5;
+        float: right;
+        position: relative;
+        right: 20px;
+        margin-bottom: 10px;
     }
 }

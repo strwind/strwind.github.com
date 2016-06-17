@@ -231,6 +231,14 @@ body {
   font-size: 14px;
   display: inline-block;
 }
+.common-column:before,
+.common-column:after {
+  content: " ";
+  display: table;
+}
+.common-column:after {
+  clear: both;
+}
 .common-column .title {
   display: -moz-box;
   display: -webkit-box;
@@ -320,6 +328,26 @@ body {
   color: #333;
   margin: 0 20px;
   display: inline-block;
+}
+.common-column .common-auto-para {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.common-column .common-auto-para-ellipsis {
+  -webkit-line-clamp: 6;
+}
+.common-column .common-auto-para-inherit {
+  -webkit-line-clamp: inherit;
+}
+.common-column .more-action {
+  font-size: 12px;
+  color: #6699f5;
+  float: right;
+  position: relative;
+  right: 20px;
+  margin-bottom: 10px;
 }
 .page1 .logo-wrap {
   position: relative;
