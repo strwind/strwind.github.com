@@ -329,19 +329,16 @@ body {
   margin: 0 20px;
   display: inline-block;
 }
-.common-column .common-auto-para {
+.common-auto-para {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
-.common-column .common-auto-para-ellipsis {
+.common-auto-para-ellipsis {
   -webkit-line-clamp: 6;
 }
-.common-column .common-auto-para-inherit {
-  -webkit-line-clamp: inherit;
-}
-.common-column .more-action {
+.common-auto-more-action {
   font-size: 12px;
   color: #6699f5;
   float: right;
@@ -466,9 +463,20 @@ body {
   padding: 0 20px;
   line-height: 24px;
   color: #656565;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   word-wrap: break-word;
   word-break: break-all;
+}
+.page2 .item1 .common-auto-more-action-wrap {
+  background: #ededed;
+}
+.page2 .item1 .common-auto-more-action-wrap:before,
+.page2 .item1 .common-auto-more-action-wrap:after {
+  content: " ";
+  display: table;
+}
+.page2 .item1 .common-auto-more-action-wrap:after {
+  clear: both;
 }
 .page2 .item3 .title-icon {
   background: url('../img/page2-item2-title.png') no-repeat;
@@ -503,7 +511,7 @@ body {
   padding: 20px;
   line-height: 24px;
   color: #656565;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   word-wrap: break-word;
   word-break: break-all;
   font-size: 14px;
@@ -545,6 +553,7 @@ body {
   width: 60px;
 }
 .page4 .item2 .people-wrap .detail {
+  white-space: nowrap;
   margin-left: 20px;
 }
 .page4 .item2 .people-wrap .detail h3 {
