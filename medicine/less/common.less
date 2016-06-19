@@ -119,6 +119,12 @@ html, body {
           margin: 0 20px;
           display: inline-block;
         }
+        p {
+            margin:0 20px;
+            a {
+                margin: 0 5px 0 0;
+            }
+        }
     }
 }
 // 查看更多
@@ -139,5 +145,9 @@ html, body {
     background: url('../img/arrow-right.png') no-repeat;
     background-size: 100%;
     transform: rotate(90deg);
+    -ms-transform:rotate(90deg);   /* IE 9 */
+    -moz-transform:rotate(90deg);  /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);  /* Opera */
     margin: 0 auto;
 }

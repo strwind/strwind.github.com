@@ -327,6 +327,12 @@ body {
   margin: 0 20px;
   display: inline-block;
 }
+.common-column .list li p {
+  margin: 0 20px;
+}
+.common-column .list li p a {
+  margin: 0 5px 0 0;
+}
 .common-auto-para {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -344,6 +350,14 @@ body {
   background: url('../img/arrow-right.png') no-repeat;
   background-size: 100%;
   transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -moz-transform: rotate(90deg);
+  /* Firefox */
+  -webkit-transform: rotate(90deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(90deg);
+  /* Opera */
   margin: 0 auto;
 }
 .page1 .logo-wrap {
