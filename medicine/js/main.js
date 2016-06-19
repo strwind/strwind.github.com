@@ -6,7 +6,7 @@ $(function () {
     $autoParas.each(function (index, para) {
         var height = $(para).height();
         if (height > SIX_HEIGHT) {
-            $('<div class="common-auto-more-action-wrap"><span class="common-auto-more-action">查看更多</span></div>').insertAfter($(para));
+            $('<div class="common-auto-more-action-wrap"><span class="common-auto-more-action"></span></div>').insertAfter($(para));
         }
     });
     
