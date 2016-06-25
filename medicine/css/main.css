@@ -134,7 +134,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 .common-serach-wrap {
-  /*position: fixed;*/
+  position: fixed;
   width: 100%;
   height: 50px;
   background: #363638;
@@ -335,6 +335,9 @@ body {
 .common-column .list li p a {
   margin: 0 5px 0 0;
 }
+.common-column .item2 .crumb span {
+  font-size: 14px;
+}
 .common-auto-para {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -347,22 +350,14 @@ body {
 }
 .common-auto-more-action {
   display: block;
-  /*height: 18px;*/
-  /*width: 6px;*/
   width: 32px;
   height: 17px;
   background: url('../img/arrow-down.png') no-repeat;
   background-size: 100%;
-  /*transform: rotate(90deg);*/
-  /*-ms-transform: rotate(90deg);*/
-  /*!* IE 9 *!*/
-  /*-moz-transform: rotate(90deg);*/
-  /*!* Firefox *!*/
-  /*-webkit-transform: rotate(90deg);*/
-  /*!* Safari 和 Chrome *!*/
-  /*-o-transform: rotate(90deg);*/
-  /*!* Opera *!*/
   margin: 0 auto;
+}
+.content {
+  padding-top: 50px;
 }
 .page1 .logo-wrap {
   position: relative;
@@ -632,8 +627,4 @@ body {
   background-size: 100%;
   display: inline-block;
   height: 18px;
-}
-
-.common-column.item2 .crumb span {
-  font-size: 14px;
 }
