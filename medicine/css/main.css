@@ -357,7 +357,12 @@ body {
   margin: 0 auto;
 }
 .content {
-  padding-top: 50px;
+  position: absolute;
+  top: 50px;
+  height: 90%;
+  width: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .page1 .logo-wrap {
   position: relative;
