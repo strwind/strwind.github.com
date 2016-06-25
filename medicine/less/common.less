@@ -82,6 +82,7 @@ html, body {
         padding: 15px 20px;
         background: #f8f8f8;
         line-height: 22px;
+        border-top: #e8e8e8 solid 1px;
         border-bottom: #e8e8e8 solid 1px;
     }
     .title-head {
@@ -111,18 +112,19 @@ html, body {
         margin-left: 10px;
     }
     .list li {
-        width: 100%;
+        width: 90%;
         padding: 20px 0;
         border-bottom: #e8e8e8 solid 1px;
-        display: inline-block;
+        margin: 0 auto;
+        &:last-child {
+            border-bottom: none;
+        }
         a {
           color: #333;
           line-height: 22px;
-          margin: 0 20px;
           display: inline-block;
         }
         p {
-            margin:0 20px;
             a {
                 margin: 0 5px 0 0;
             }
