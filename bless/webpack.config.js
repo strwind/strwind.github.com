@@ -11,7 +11,7 @@ var definePlugin = new webpack.DefinePlugin({
 });
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: './src/js/Main.js',
   output: {
     path: __dirname,
     filename: 'build/bundle.js'

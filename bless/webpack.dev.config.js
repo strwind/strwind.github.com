@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var fs = require('fs');
 var Clean = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var definePlugin = new webpack.DefinePlugin({
   __DEV__: false,
@@ -11,7 +12,7 @@ var definePlugin = new webpack.DefinePlugin({
 });
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: './src/js/Main.js',
   output: {
     path: __dirname,
     filename: 'build/bundle.js'
@@ -46,6 +47,15 @@ module.exports = {
       Zepto: 'zepto',
       'window.Zepto': 'zepto'
     }),
+    new CopyWebpackPlugin([{
+        from: __dirname + '/src/lib/',
+        to: __dirname + '/build/',
+        ignore: "*.css"
+    }]),
+    new CopyWebpackPlugin([{
+        from: __dirname + '/src/img/',
+        to: __dirname + '/build/img/'
+    }]),
     /*
     new webpack.optimize.UglifyJsPlugin({
       compress: {

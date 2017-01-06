@@ -14,6 +14,7 @@
     "clean-webpack-plugin": "*",
     "babel-loader": "*",
     "style-loader": "*",
-    "less-loader": "*"
+    "less-loader": "*",
+    "copy-webpack-plugin": "*"
   }
 }
