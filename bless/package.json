@@ -3,21 +3,17 @@
   "description": "祝福",
   "version": "0.0.1",
   "keywords": [],
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "dev": "webpack --config webpack.dev.config.js"
+  },
   "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "del": "*",
-    "gulp": "^3.8.11",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "*",
-    "gulp-cssmin": "*",
-    "gulp-if": "*",
-    "gulp-imagemin": "*",
-    "gulp-less": "*",
-    "gulp-rename": "~1.2.2",
-    "gulp-sourcemaps": "*",
-    "gulp-uglify": "~1.5.3",
-    "gulp-util": "*",
-    "gulp-watch": "*"
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^2.2.0-rc.3",
+    "clean-webpack-plugin": "*",
+    "babel-loader": "*",
+    "style-loader": "*",
+    "less-loader": "*"
   }
 }

@@ -2,7 +2,7 @@
 
 const Util = {
     add: function () {
-        return arguments[0] + arguments[1];
+        return arguments[0] + arguments[1] + 1;
     },
     
     min: function (num1, num2) {
@@ -10,7 +10,7 @@ const Util = {
     },
     
     fun: function () {
-        
+        return 1;
     }
 };
 
