@@ -2,12 +2,20 @@ import css from '../less/main.less';
 
 const Main = {
     init: function () {
-        this.slide();
+        this.slideUp();
+        this.slideRow();
     },
     
-    slide: function () {
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
+    
+    slideUp: function () {
+        var swiper = new Swiper('.swiper-container-up', {
+            paginationClickable: true,
+            direction: 'vertical'
+        });
+    },
+    
+    slideRow: function () {
+        var swiper = new Swiper('.swiper-container-row', {
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
