@@ -5,33 +5,34 @@
     .swiper-container-up {
        width:100%;
        height:100%;
-       .swiper-slide-one{
-            text-align:center;
-            font-size:18px;
-            background:#fff;
+    }
+    .swiper-slide-one{
+        text-align:center;
+        font-size:18px;
+        background:#fff;
+        .display(flex);
+        .justify-content(center);
+        .align-items(center);
+        .flex-direction(column);
+        .swiper-img {
+            .flex(1);
+            width: 100%;
+            display: block;
+         }
+        .bottom-bar {
+            .flex(none);
+            width: 100%;
+            max-height: 50px;
+            background: #d4062d;
+            color: white;
+            text-align: center;
             .display(flex);
+             padding: 15px;
             .justify-content(center);
             .align-items(center);
-            .flex-direction(column);
-             .bottom-bar {
-                width: 100%;
-                max-height: 50px;
-                background: red;
-                color: white;
-                text-align: center;
-                .display(flex);
-                 padding: 15px;
-                .justify-content(center);
-                .align-items(center);
-             }
-        }
-        .swiper-img {
-          height: 80%;
-          display: block;
-          margin: 30px 30px auto;
-       }
+         }
     }
-  
+
     .swiper-container-row{
        width:100%;
        margin: 30px auto;
