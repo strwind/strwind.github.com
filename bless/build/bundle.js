@@ -160,22 +160,64 @@ const Model = {
     
     imgGroup: [
         {
-            title: '睡',
+            title: '宝',
             path: [
-                'shui-1.jpg',
-                'shui-2.jpg'
+                'bao-1.jpg',
+                'bao-2.jpg'
             ],
             links: [
                 {
-                    text: '睡睡睡睡xxx',
+                    text: '宝宝xxx',
                     url: '//www.baidu.com'
                 },
                 {
-                    text: '睡睡睡睡xxx',
+                    text: '宝宝xxx',
                     url: '//www.baidu.com'
                 },
                 {
-                    text: '睡睡睡睡xxx',
+                    text: '宝宝xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '吃',
+            path: [
+                'chi-1.jpg',
+                'chi-2.jpg'
+            ],
+            links: [
+                {
+                    text: '吃吃·····',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '吃吃·····',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '吃吃·····',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '防',
+            path: [
+                'fang-1.jpg',
+                'fang-2.jpg'
+            ],
+            links: [
+                {
+                    text: '防aaa',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '防aaa',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '防aaa',
                     url: '//www.baidu.com'
                 }
             ]
@@ -201,6 +243,205 @@ const Model = {
                     url: '//www.baidu.com'
                 }
             ]
+        },
+        {
+            title: '壕',
+            path: [
+                'hao-1.jpg'
+            ],
+            links: [
+                {
+                    text: '壕xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '壕xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '肌',
+            path: [
+                'ji-1.jpg',
+                'ji-2.jpg'
+            ],
+            links: [
+                {
+                    text: '肌肌肌肌肌xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '肌肌肌肌肌xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '肌肌肌肌肌xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '康',
+            path: [
+                'kang-1.jpg'
+            ],
+            links: [
+                {
+                    text: '康康康康康xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '脸',
+            path: [
+                'lian-1.jpg',
+                'lian-2.jpg'
+            ],
+            links: [
+                {
+                    text: '脸xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '脸xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '脸xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '霾',
+            path: [
+                'mai-1.jpg'
+            ],
+            links: [
+                {
+                    text: '霾xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '霾xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '霾xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '肉',
+            path: [
+                'rou-1.jpg',
+                'rou-2.jpg',
+                'rou-3.jpg',
+                'rou-4.jpg'
+            ],
+            links: [
+                {
+                    text: '肉xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '肉xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '肉xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '瘦',
+            path: [
+                'shou-1.jpg',
+                'shou-2.jpg'
+            ],
+            links: [
+                {
+                    text: '瘦ccc',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '瘦ccc',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '瘦ccc',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '睡',
+            path: [
+                'shui-1.jpg',
+                'shui-2.jpg'
+            ],
+            links: [
+                {
+                    text: '睡睡睡睡xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '睡睡睡睡xxx',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '睡睡睡睡xxx',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '汪',
+            path: [
+                'wang-1.jpg',
+                'wang-2.jpg',
+                'wang-3.jpg',
+                'wang-4.jpg'
+            ],
+            links: [
+                {
+                    text: '汪rrrrr',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '汪rrrrr',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '汪rrrrr',
+                    url: '//www.baidu.com'
+                }
+            ]
+        },
+        {
+            title: '毅',
+            path: [
+                'yi-1.jpg',
+                'yi-2.jpg'
+            ],
+            links: [
+                {
+                    text: '毅rrrrr',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '毅rrrrr',
+                    url: '//www.baidu.com'
+                },
+                {
+                    text: '毅rrrrr',
+                    url: '//www.baidu.com'
+                }
+            ]
         }
     ],
     imgList: [
@@ -221,7 +462,7 @@ exports = module.exports = __webpack_require__(0)();
 exports.i(__webpack_require__(4), "");
 
 // module
-exports.push([module.i, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n/* common */\na {\n  text-decoration: none;\n}\nhtml,\nbody {\n  height: 100%;\n  width: 100%;\n  overflow-x: hidden;\n  -webkit-overflow-scrolling: touch;\n}\n.container {\n  height: 100%;\n}\n.container .swiper-container-up {\n  width: 100%;\n  height: 100%;\n}\n.container .swiper-container-row {\n  width: 100%;\n  margin: 30px auto;\n}\n.container .swiper-slide-one {\n  display: none !important;\n  text-align: center;\n  font-size: 18px;\n  background: #fff;\n  display: -moz-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: -ms-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -moz-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  -ms-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -moz-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  -ms-align-items: center;\n  align-items: center;\n  -webkit-box-orient: vertical;\n  -moz-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -moz-box-direction: normal;\n  min-height: 0;\n  -webkit-flex-direction: column;\n  -moz-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n.container .swiper-slide-one .swiper-img {\n  -webkit-box-flex: 1;\n  -moz-box-flex: 1;\n  -webkit-flex: 1 1 0.01%;\n  -moz-flex: 1 1 0.01%;\n  -ms-flex: 1 1 0.01%;\n  flex: 1 1 0.01%;\n  -ms-flex-positive: 1;\n  -ms-flex-negative: 1;\n  -ms-flex-preferred-size: 0.01%;\n  width: 100%;\n  display: block;\n}\n.container .swiper-slide-one .bottom-bar {\n  -webkit-box-flex: none;\n  -moz-box-flex: none;\n  -webkit-flex: none 1 0.01%;\n  -moz-flex: none 1 0.01%;\n  -ms-flex: none 1 0.01%;\n  flex: none 1 0.01%;\n  -ms-flex-positive: none;\n  -ms-flex-negative: 1;\n  -ms-flex-preferred-size: 0.01%;\n  width: 100%;\n  max-height: 50px;\n  background: #d4062d;\n  color: white;\n  text-align: center;\n  display: -moz-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: -ms-flex;\n  display: flex;\n  padding: 15px;\n  -webkit-box-pack: center;\n  -moz-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  -ms-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -moz-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  -ms-align-items: center;\n  align-items: center;\n}\n.container .swiper-slide-two .swiper-slide {\n  -webkit-box-orient: vertical;\n  -moz-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -moz-box-direction: normal;\n  min-height: 0;\n  -webkit-flex-direction: column;\n  -moz-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  background-position: center;\n  background-size: cover;\n  width: 60%;\n  height: 100%;\n}\n.container .swiper-slide-two .swiper-img {\n  width: 100%;\n  height: 100%;\n  display: block;\n  margin: 0 auto;\n}\n.container .swiper-slide-two .button-list {\n  display: -moz-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: -ms-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -moz-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  -ms-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -moz-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  -ms-align-items: center;\n  align-items: center;\n}\n.container .swiper-slide-two .button-list button {\n  -webkit-box-flex: 1;\n  -moz-box-flex: 1;\n  -webkit-flex: 1 1 0.01%;\n  -moz-flex: 1 1 0.01%;\n  -ms-flex: 1 1 0.01%;\n  flex: 1 1 0.01%;\n  -ms-flex-positive: 1;\n  -ms-flex-negative: 1;\n  -ms-flex-preferred-size: 0.01%;\n  padding: 10px;\n  border: 1px solid #d4062d;\n  background: white;\n  border-radius: 10px;\n  margin: 20px;\n  color: #d4062d;\n  font-size: 18px;\n}\n.container .swiper-slide-two .button-list .share {\n  background: #d4062d;\n  color: white;\n}\n.container .swiper-slide-two .link-list {\n  padding: 5px 30px;\n}\n.container .swiper-slide-two .link-list h3 {\n  color: #d4062d;\n  font-size: 18px;\n}\n.container .swiper-slide-two .link-list h3 .key {\n  font-size: 20px;\n  font-weight: bold;\n}\n.container .swiper-slide-two .link-list ul {\n  padding: 10px 0;\n}\n.container .swiper-slide-two .link-list ul li {\n  padding: 3px 0px;\n  font-size: 14px;\n}\n.container .swiper-slide-two .copyright {\n  text-align: center;\n  font-size: 10px;\n  color: #bebebe;\n  position: absolute;\n  bottom: 10px;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 1;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n/* common */\na {\n  text-decoration: none;\n}\nhtml,\nbody {\n  height: 100%;\n  width: 100%;\n  overflow-x: hidden;\n  -webkit-overflow-scrolling: touch;\n}\n.container {\n  height: 100%;\n}\n.container .swiper-container-up {\n  width: 100%;\n  height: 100%;\n}\n.container .swiper-container-row {\n  width: 100%;\n  margin: 30px auto;\n}\n.container .swiper-slide-one {\n  text-align: center;\n  font-size: 18px;\n  background: #fff;\n  display: -moz-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: -ms-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -moz-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  -ms-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -moz-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  -ms-align-items: center;\n  align-items: center;\n  -webkit-box-orient: vertical;\n  -moz-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -moz-box-direction: normal;\n  min-height: 0;\n  -webkit-flex-direction: column;\n  -moz-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n.container .swiper-slide-one .swiper-img {\n  -webkit-box-flex: 1;\n  -moz-box-flex: 1;\n  -webkit-flex: 1 1 0.01%;\n  -moz-flex: 1 1 0.01%;\n  -ms-flex: 1 1 0.01%;\n  flex: 1 1 0.01%;\n  -ms-flex-positive: 1;\n  -ms-flex-negative: 1;\n  -ms-flex-preferred-size: 0.01%;\n  width: 100%;\n  display: block;\n}\n.container .swiper-slide-one .bottom-bar {\n  -webkit-box-flex: none;\n  -moz-box-flex: none;\n  -webkit-flex: none 1 0.01%;\n  -moz-flex: none 1 0.01%;\n  -ms-flex: none 1 0.01%;\n  flex: none 1 0.01%;\n  -ms-flex-positive: none;\n  -ms-flex-negative: 1;\n  -ms-flex-preferred-size: 0.01%;\n  width: 100%;\n  max-height: 50px;\n  background: #d4062d;\n  color: white;\n  text-align: center;\n  display: -moz-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: -ms-flex;\n  display: flex;\n  padding: 15px;\n  -webkit-box-pack: center;\n  -moz-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  -ms-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -moz-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  -ms-align-items: center;\n  align-items: center;\n}\n.container .swiper-slide-two .swiper-slide {\n  -webkit-box-orient: vertical;\n  -moz-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -moz-box-direction: normal;\n  min-height: 0;\n  -webkit-flex-direction: column;\n  -moz-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  background-position: center;\n  background-size: cover;\n  width: 60%;\n  height: 100%;\n}\n.container .swiper-slide-two .swiper-img {\n  width: 100%;\n  height: 100%;\n  display: block;\n  margin: 0 auto;\n}\n.container .swiper-slide-two .button-list {\n  display: -moz-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: -ms-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -moz-box-pack: center;\n  -ms-flex-pack: center;\n  -webkit-justify-content: center;\n  -moz-justify-content: center;\n  -ms-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -moz-box-align: center;\n  -ms-flex-align: center;\n  -webkit-align-items: center;\n  -moz-align-items: center;\n  -ms-align-items: center;\n  align-items: center;\n}\n.container .swiper-slide-two .button-list button {\n  -webkit-box-flex: 1;\n  -moz-box-flex: 1;\n  -webkit-flex: 1 1 0.01%;\n  -moz-flex: 1 1 0.01%;\n  -ms-flex: 1 1 0.01%;\n  flex: 1 1 0.01%;\n  -ms-flex-positive: 1;\n  -ms-flex-negative: 1;\n  -ms-flex-preferred-size: 0.01%;\n  padding: 10px;\n  border: 1px solid #d4062d;\n  background: white;\n  border-radius: 10px;\n  margin: 20px;\n  color: #d4062d;\n  font-size: 18px;\n}\n.container .swiper-slide-two .button-list .share {\n  background: #d4062d;\n  color: white;\n}\n.container .swiper-slide-two .link-list {\n  padding: 5px 30px;\n}\n.container .swiper-slide-two .link-list h3 {\n  color: #d4062d;\n  font-size: 18px;\n}\n.container .swiper-slide-two .link-list h3 .key {\n  font-size: 20px;\n  font-weight: bold;\n}\n.container .swiper-slide-two .link-list ul {\n  padding: 10px 0;\n}\n.container .swiper-slide-two .link-list ul li {\n  padding: 3px 0px;\n  font-size: 14px;\n}\n.container .swiper-slide-two .copyright {\n  text-align: center;\n  font-size: 10px;\n  color: #bebebe;\n  position: absolute;\n  bottom: 10px;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
