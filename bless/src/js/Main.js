@@ -1,5 +1,7 @@
-import css from '../less/main.less';
-import Model from './Model.js';
+//import css from '../less/main.less';
+
+const Model = require('./Model.js');
+const Swiper = require('../lib/swiper.min.js');
 
 const ROOT_SRC = "./build/img/";
 const CURRENT_INDEX = 0;
