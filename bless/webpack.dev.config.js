@@ -12,7 +12,7 @@ var definePlugin = new webpack.DefinePlugin({
 });
 
 module.exports = {
-  entry: './src/js/Main.js',
+  entry: ['babel-polyfill','./src/js/Main.js'],
   output: {
     path: __dirname,
     filename: 'build/bundle.js'
@@ -20,13 +20,19 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.(js|jsx)$/,
-        loader: 'babel-loader',
-        query: {
-          cacheDirectory: '.tmp/'
-        },
-        exclude: 'node_modules/'
-      }
+          test: /\.js$/,
+          exclude: /node_modules\/(?!(stardust))/,
+          loader: 'babel',
+          query: {
+            cacheDirectory: true,
+            plugins: [
+              'transform-runtime',
+              'add-module-exports',
+              'transform-decorators-legacy',
+            ],
+            presets: ['es2015', 'react', 'stage-1'],
+          }
+        }
     ],
     rules: [
       {

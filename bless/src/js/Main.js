@@ -16,32 +16,28 @@ const Main = {
     },
     
     rendSlideUp: function() { 
-        let name = this.getQuery('imgName') || Model.defaultImg;
+        var name = this.getQuery('imgName') || Model.defaultImg;
         this.page1Img.src = ROOT_SRC + name;
     },
     
     rendRowSlide: function() {
-        let imgList = this.getRandomImgList();
-        let tempHtml = '';
-        imgList.forEach((imgName)=> {
-            tempHtml += `
-               <div class="swiper-slide">
-                    <img class="swiper-img" src="${ROOT_SRC + imgName }">
-                </div>
-            `;
+        var imgList = this.getRandomImgList();
+        var tempHtml = '';
+        imgList.forEach(function(imgName) {
+            tempHtml += '<div class="swiper-slide">';
+            tempHtml +=     '<img class="swiper-img" src="' + ROOT_SRC + imgName + '">';
+            tempHtml += '</div>';
         });
         this.rowSwiperWrapper.innerHTML = tempHtml;
     },
     
     rendRowAdvice: function (index) {
         index = index || CURRENT_INDEX;
-        let tempHtml = '';
-        let item = Model.imgGroup[index];
-        item.links.forEach((link, index)=> {
+        var tempHtml = '';
+        var item = Model.imgGroup[index];
+        item.links.forEach(function(link, index) {
             if (index < 4) {
-                tempHtml += `
-                   <li><a href="${link.url}">${link.text}</a></li>
-                `;
+                tempHtml += '<li><a href="' + link.url + '">' + link.text + '</a></li>';
             }
         });
         this.linkList.innerHTML = tempHtml;
@@ -49,40 +45,40 @@ const Main = {
     },
     
     getRandomImgList: function() {
-        let random = Math.random();
-        let list = [];
-        Model.imgGroup.forEach((item)=> {
-            let index = Math.floor(random * item.path.length);
-            let name = item.path[index];
+        var random = Math.random();
+        var list = [];
+        Model.imgGroup.forEach(function(item) {
+            var index = Math.floor(random * item.path.length);
+            var name = item.path[index];
             list.push(name);
         });
         return list;
     },
     
     getQuery: function(query) {
-        let hash = document.location.hash || '';
+        var hash = document.location.hash || '';
         hash = hash.slice(1);
         hash = hash.split("&");
-        let map = {};
-        hash.map((item)=> {
-            let arr = item.split('=');
+        var map = {};
+        hash.map(function(item) {
+            var arr = item.split('=');
             map[arr[0]] = arr[1];
         });
         return map[query];
     },
     
     setQuery: function(key, value) {
-        let hash = document.location.hash || '';
+        var hash = document.location.hash || '';
         hash = hash.slice(1);
         hash = hash.split("&");
-        let map = {};
-        hash.map((item)=> {
-            let arr = item.split('=');
+        var map = {};
+        hash.map(function(item) {
+            var arr = item.split('=');
             map[arr[0]] = arr[1];
         });
         map[key] = value;
-        let resultHash = '#';
-        for(let i in map) {
+        var resultHash = '#';
+        for(var i in map) {
             if (i && map[i]) {
                 resultHash += i + '=' + map[i] + '&';
             }
@@ -92,8 +88,8 @@ const Main = {
     
     initSlideUp: function() {
         this.rendSlideUp();
-        let self = this;
-        let swiper = new Swiper('.swiper-container-up', {
+        var self = this;
+        var swiper = new Swiper('.swiper-container-up', {
             paginationClickable: true,
             direction: 'vertical',
             onTransitionEnd: function(swiper){
@@ -110,7 +106,7 @@ const Main = {
         if (!this.rowSwiperImgList) {
             this.rowSwiperImgList = this.rowSwiperWrapper.querySelectorAll('.swiper-img');
         }
-        let self = this;
+        var self = this;
         var swiper = new Swiper('.swiper-container-row', {
             effect: 'coverflow',
             grabCursor: true,
@@ -125,11 +121,11 @@ const Main = {
                 slideShadows : true
             },
             onTransitionStart: function(swiper){
-                let imgIndex = swiper.activeIndex;
-                let newImgList = self.getRandomImgList();
+                var imgIndex = swiper.activeIndex;
+                var newImgList = self.getRandomImgList();
                 // 替换图片
                 if (self.rowSwiperImgList) {
-                    let imgName = newImgList[imgIndex];
+                    var imgName = newImgList[imgIndex];
                     self.setQuery('imgName', imgName);
                     self.rowSwiperImgList[imgIndex].src = ROOT_SRC + imgName;
                 }
