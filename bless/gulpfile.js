@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
       insertGlobals : true,
       debug : false
     }))
-    .pipe(uglify())
+    .pipe(gulpIf(isBuild, uglify()))
     .pipe(concat('bundle.js'))
     //.pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/'));

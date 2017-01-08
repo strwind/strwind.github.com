@@ -15,6 +15,7 @@ const Main = {
         this.initSlideUp();
         this.initSlideRow();
         this.rendRowAdvice();
+        this.bindEvent();
     },
     
     rendSlideUp: function() { 
@@ -25,10 +26,10 @@ const Main = {
     rendRowSlide: function() {
         let imgList = this.getRandomImgList();
         let tempHtml = '';
-        imgList.forEach(function(imgName) {
-            tempHtml += '<div class="swiper-slide">';
-            tempHtml +=     '<img class="swiper-img" src="' + ROOT_SRC + imgName + '">';
-            tempHtml += '</div>';
+        imgList.forEach((imgName, index)=> {
+            tempHtml += `<div class="swiper-slide">
+                             <img class="swiper-img" data-index="${index}" src="${ROOT_SRC + imgName}">
+                         </div>`;
         });
         this.rowSwiperWrapper.innerHTML = tempHtml;
     },
@@ -39,7 +40,7 @@ const Main = {
         let item = Model.imgGroup[index];
         item.links.forEach(function(link, index) {
             if (index < 4) {
-                tempHtml += '<li><a href="' + link.url + '">' + link.text + '</a></li>';
+                tempHtml += `<li><a href="${link.url}">${link.text}</a></li>`;
             }
         });
         this.linkList.innerHTML = tempHtml;
@@ -78,7 +79,7 @@ const Main = {
             this.rowSwiperImgList = this.rowSwiperWrapper.querySelectorAll('.swiper-img');
         }
         let self = this;
-        let swiper = new Swiper('.swiper-container-row', {
+        this.swiperRow = new Swiper('.swiper-container-row', {
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
@@ -96,16 +97,36 @@ const Main = {
                 let newImgList = self.getRandomImgList();
                 // 替换图片
                 if (self.rowSwiperImgList) {
-                    let imgName = newImgList[imgIndex];
-                    Util.setQuery('imgName', imgName);
-                    self.rowSwiperImgList[imgIndex].src = ROOT_SRC + imgName;
+                    Util.setQuery('imgName', newImgList[imgIndex]);
+                    
+                    if (newImgList[imgIndex - 1] && self.rowSwiperImgList[imgIndex - 1]) {
+                         self.rowSwiperImgList[imgIndex - 1].src = ROOT_SRC + newImgList[imgIndex- 1];
+                    }
+                    if (newImgList[imgIndex + 1] && self.rowSwiperImgList[imgIndex + 1]) {
+                         self.rowSwiperImgList[imgIndex + 1].src = ROOT_SRC + newImgList[imgIndex + 1];
+                    }
                 }
                 // 替换推荐
                 self.rendRowAdvice(imgIndex);
             }
         });
-    }
+    },
     
+    bindEvent: function () {
+        let imgList = this.getRandomImgList();
+        let next = true;
+        document.querySelector('.swiper-container-row').addEventListener('click', function (e) {
+            let index = e.target.getAttribute('data-index');
+            if ( index == imgList.length - 1) {
+                next = false;
+            }
+            if (index == 0) {
+                next = true;
+            }
+            next ? this.swiperRow.slideNext() : this.swiperRow.slidePrev();
+        }.bind(this), false);
+        
+    }
 };
 
 Main.init();
