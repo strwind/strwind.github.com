@@ -1,17 +1,35 @@
 
 
 const Util = {
-    add: function () {
-        return arguments[0] + arguments[1] + 1;
+    getQuery: function(query) {
+        var hash = document.location.hash || '';
+        hash = hash.slice(1);
+        hash = hash.split("&");
+        var map = {};
+        hash.map(function(item) {
+            var arr = item.split('=');
+            map[arr[0]] = arr[1];
+        });
+        return map[query];
     },
     
-    min: function (num1, num2) {
-        return num2 - num1;
-    },
-    
-    fun: function () {
-        return 1;
+    setQuery: function(key, value) {
+        var hash = document.location.hash || '';
+        hash = hash.slice(1);
+        hash = hash.split("&");
+        var map = {};
+        hash.map(function(item) {
+            var arr = item.split('=');
+            map[arr[0]] = arr[1];
+        });
+        map[key] = value;
+        var resultHash = '#';
+        for(var i in map) {
+            if (i && map[i]) {
+                resultHash += i + '=' + map[i] + '&';
+            }
+        }
+        document.location.hash = resultHash;
     }
 };
-
-export default Util;
+module.exports = Util;

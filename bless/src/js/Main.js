@@ -1,6 +1,6 @@
-//import css from '../less/main.less';
 
 const Model = require('./Model.js');
+const Util = require('./Util.js');
 const Swiper = require('../lib/swiper.min.js');
 
 const ROOT_SRC = "./build/img/";
@@ -18,13 +18,13 @@ const Main = {
     },
     
     rendSlideUp: function() { 
-        var name = this.getQuery('imgName') || Model.defaultImg;
+        let name = Util.getQuery('imgName') || Model.defaultImg;
         this.page1Img.src = ROOT_SRC + name;
     },
     
     rendRowSlide: function() {
-        var imgList = this.getRandomImgList();
-        var tempHtml = '';
+        let imgList = this.getRandomImgList();
+        let tempHtml = '';
         imgList.forEach(function(imgName) {
             tempHtml += '<div class="swiper-slide">';
             tempHtml +=     '<img class="swiper-img" src="' + ROOT_SRC + imgName + '">';
@@ -35,8 +35,8 @@ const Main = {
     
     rendRowAdvice: function (index) {
         index = index || CURRENT_INDEX;
-        var tempHtml = '';
-        var item = Model.imgGroup[index];
+        let tempHtml = '';
+        let item = Model.imgGroup[index];
         item.links.forEach(function(link, index) {
             if (index < 4) {
                 tempHtml += '<li><a href="' + link.url + '">' + link.text + '</a></li>';
@@ -47,51 +47,20 @@ const Main = {
     },
     
     getRandomImgList: function() {
-        var random = Math.random();
-        var list = [];
+        let random = Math.random();
+        let list = [];
         Model.imgGroup.forEach(function(item) {
-            var index = Math.floor(random * item.path.length);
-            var name = item.path[index];
+            let index = Math.floor(random * item.path.length);
+            let name = item.path[index];
             list.push(name);
         });
         return list;
     },
-    
-    getQuery: function(query) {
-        var hash = document.location.hash || '';
-        hash = hash.slice(1);
-        hash = hash.split("&");
-        var map = {};
-        hash.map(function(item) {
-            var arr = item.split('=');
-            map[arr[0]] = arr[1];
-        });
-        return map[query];
-    },
-    
-    setQuery: function(key, value) {
-        var hash = document.location.hash || '';
-        hash = hash.slice(1);
-        hash = hash.split("&");
-        var map = {};
-        hash.map(function(item) {
-            var arr = item.split('=');
-            map[arr[0]] = arr[1];
-        });
-        map[key] = value;
-        var resultHash = '#';
-        for(var i in map) {
-            if (i && map[i]) {
-                resultHash += i + '=' + map[i] + '&';
-            }
-        }
-        document.location.hash = resultHash;
-    },
-    
+
     initSlideUp: function() {
         this.rendSlideUp();
-        var self = this;
-        var swiper = new Swiper('.swiper-container-up', {
+        let self = this;
+        let swiper = new Swiper('.swiper-container-up', {
             paginationClickable: true,
             direction: 'vertical',
             onTransitionEnd: function(swiper){
@@ -108,8 +77,8 @@ const Main = {
         if (!this.rowSwiperImgList) {
             this.rowSwiperImgList = this.rowSwiperWrapper.querySelectorAll('.swiper-img');
         }
-        var self = this;
-        var swiper = new Swiper('.swiper-container-row', {
+        let self = this;
+        let swiper = new Swiper('.swiper-container-row', {
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
@@ -123,12 +92,12 @@ const Main = {
                 slideShadows : true
             },
             onTransitionStart: function(swiper){
-                var imgIndex = swiper.activeIndex;
-                var newImgList = self.getRandomImgList();
+                let imgIndex = swiper.activeIndex;
+                let newImgList = self.getRandomImgList();
                 // 替换图片
                 if (self.rowSwiperImgList) {
-                    var imgName = newImgList[imgIndex];
-                    self.setQuery('imgName', imgName);
+                    let imgName = newImgList[imgIndex];
+                    Util.setQuery('imgName', imgName);
                     self.rowSwiperImgList[imgIndex].src = ROOT_SRC + imgName;
                 }
                 // 替换推荐
