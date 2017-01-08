@@ -87,7 +87,7 @@ const Main = {
             slidesPerView: 'auto',
             initialSlide: CURRENT_INDEX,
             coverflow: {
-                rotate: 50,
+                rotate: 0,
                 stretch: 0,
                 depth: 100,
                 modifier: 1,
