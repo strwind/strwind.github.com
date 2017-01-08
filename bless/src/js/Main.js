@@ -98,13 +98,14 @@ const Main = {
                 // 替换图片
                 if (self.rowSwiperImgList) {
                     Util.setQuery('imgName', newImgList[imgIndex]);
-                    
-                    if (newImgList[imgIndex - 1] && self.rowSwiperImgList[imgIndex - 1]) {
-                         self.rowSwiperImgList[imgIndex - 1].src = ROOT_SRC + newImgList[imgIndex- 1];
-                    }
-                    if (newImgList[imgIndex + 1] && self.rowSwiperImgList[imgIndex + 1]) {
-                         self.rowSwiperImgList[imgIndex + 1].src = ROOT_SRC + newImgList[imgIndex + 1];
-                    }
+                    setTimeout(()=>{
+                        if (newImgList[imgIndex - 1] && self.rowSwiperImgList[imgIndex - 1]) {
+                             self.rowSwiperImgList[imgIndex - 1].src = ROOT_SRC + newImgList[imgIndex- 1];
+                        }
+                        if (newImgList[imgIndex + 1] && self.rowSwiperImgList[imgIndex + 1]) {
+                             self.rowSwiperImgList[imgIndex + 1].src = ROOT_SRC + newImgList[imgIndex + 1];
+                        }
+                    }, 0);
                 }
                 // 替换推荐
                 self.rendRowAdvice(imgIndex);
