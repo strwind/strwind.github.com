@@ -3,7 +3,8 @@ const Model = require('./Model.js');
 const Util = require('./Util.js');
 const Swiper = require('../lib/swiper.min.js');
 
-const ROOT_SRC = "./build/img/";
+const ROOT_UP_SRC = "./build/img/page1/";
+const ROOT_ROW_SRC = "./build/img/page2/";
 const CURRENT_INDEX = 0;
 
 const Main = {
@@ -20,7 +21,7 @@ const Main = {
     
     rendSlideUp: function() { 
         let name = Util.getQuery('imgName') || Model.defaultImg;
-        this.page1Img.src = ROOT_SRC + name;
+        this.page1Img.src = ROOT_UP_SRC + name;
     },
     
     rendRowSlide: function() {
@@ -28,7 +29,7 @@ const Main = {
         let tempHtml = '';
         imgList.forEach((imgName, index)=> {
             tempHtml += `<div class="swiper-slide">
-                             <img class="swiper-img" data-index="${index}" src="${ROOT_SRC + imgName}">
+                             <img class="swiper-img" data-index="${index}" src="${ROOT_ROW_SRC + imgName}">
                          </div>`;
         });
         this.rowSwiperWrapper.innerHTML = tempHtml;
@@ -100,10 +101,10 @@ const Main = {
                     Util.setQuery('imgName', newImgList[imgIndex]);
                     setTimeout(()=>{
                         if (newImgList[imgIndex - 1] && self.rowSwiperImgList[imgIndex - 1]) {
-                             self.rowSwiperImgList[imgIndex - 1].src = ROOT_SRC + newImgList[imgIndex- 1];
+                             self.rowSwiperImgList[imgIndex - 1].src = ROOT_ROW_SRC + newImgList[imgIndex- 1];
                         }
                         if (newImgList[imgIndex + 1] && self.rowSwiperImgList[imgIndex + 1]) {
-                             self.rowSwiperImgList[imgIndex + 1].src = ROOT_SRC + newImgList[imgIndex + 1];
+                             self.rowSwiperImgList[imgIndex + 1].src = ROOT_ROW_SRC + newImgList[imgIndex + 1];
                         }
                     }, 0);
                 }
