@@ -14,7 +14,7 @@ var isBuild = true;
 var paths = {
   scripts: ['src/**/*.js'],
   less: ['./src/**/*.less'],
-  images: 'src/**/*.jpg'
+  images:['src/**/*.jpg', 'src/**/*.png']
 };
 
 //切换为生产模式

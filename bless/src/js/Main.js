@@ -13,6 +13,9 @@ const Main = {
         this.page1Img = document.querySelector('#page1Img');
         this.keyWord = document.querySelector('#keyWord');
         this.linkList = document.querySelector('#linkList');
+        this.showBigImgBtn = document.querySelector('#showBigImgBtn');
+        this.shareBtn = document.querySelector('#shareBtn');
+        this.mask = document.querySelector('#mask');
         this.initSlideUp();
         this.initSlideRow();
         this.rendRowAdvice();
@@ -115,6 +118,7 @@ const Main = {
     },
     
     bindEvent: function () {
+        // 图片点击切换
         let imgList = this.getRandomImgList();
         let next = true;
         document.querySelector('.swiper-container-row').addEventListener('click', function (e) {
@@ -128,7 +132,18 @@ const Main = {
             next ? this.swiperRow.slideNext() : this.swiperRow.slidePrev();
         }.bind(this), false);
         
+        //点击分享绑定事件
+        this.shareBtn.addEventListener('click', function (e) {
+            this.mask.style.display = 'block';
+        }.bind(this), false);
+        
+        //点击查看大图事件
+        this.showBigImgBtn.addEventListener('click', function (e) {
+            //TODO
+        }.bind(this), false);
     }
+    
+    
 };
 
 Main.init();
