@@ -43,7 +43,7 @@ const Main = {
         let tempHtml = '';
         let item = Model.imgGroup[index];
         item.links.forEach(function(link, index) {
-            if (index < 4) {
+            if (index < 5) {
                 tempHtml += `<li><a href="${link.url}">${link.text}</a></li>`;
             }
         });
@@ -118,6 +118,8 @@ const Main = {
     },
     
     bindEvent: function () {
+        
+        /*
         // 图片点击切换
         let imgList = this.getRandomImgList();
         let next = true;
@@ -131,10 +133,18 @@ const Main = {
             }
             next ? this.swiperRow.slideNext() : this.swiperRow.slidePrev();
         }.bind(this), false);
+        */
         
         //点击分享绑定事件
         this.shareBtn.addEventListener('click', function (e) {
+            e.preventDefault();
             this.mask.style.display = 'block';
+        }.bind(this), true);
+        
+        //点击mask绑定事件
+        this.mask.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.mask.style.display = 'none';
         }.bind(this), false);
         
         //点击查看大图事件
