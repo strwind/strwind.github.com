@@ -43,7 +43,7 @@ const Main = {
         let tempHtml = '';
         let item = Model.imgGroup[index];
         item.links.forEach(function(link, index) {
-            if (index < 5) {
+            if (index < 4) {
                 tempHtml += `<li><a href="${link.url}">${link.text}</a></li>`;
             }
         });
