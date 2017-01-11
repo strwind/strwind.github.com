@@ -94,7 +94,9 @@ const Main = {
                 stretch: 0,
                 depth: 100,
                 modifier: 1,
-                slideShadows : true
+                slideShadows : true,
+                loop: true,
+                loopedSlides: Model.imgGroup.length - 1
             },
             onTransitionStart: function(swiper){
                 let imgIndex = swiper.activeIndex;
