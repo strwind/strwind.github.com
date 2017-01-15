@@ -65,7 +65,7 @@ const Main = {
     initSlideUp: function() {
         this.rendSlideUp();
         let self = this;
-        let swiper = new Swiper('.swiper-container-up', {
+        let swiperUp = new Swiper('.swiper-container-up', {
             paginationClickable: true,
             direction: 'vertical',
             onTransitionEnd: function(swiper){
@@ -89,17 +89,18 @@ const Main = {
             centeredSlides: true,
             slidesPerView: 'auto',
             initialSlide: CURRENT_INDEX,
+            loop: true,
+            loopedSlides: Model.imgGroup.length - 1,
             coverflow: {
                 rotate: 0,
                 stretch: 0,
                 depth: 100,
                 modifier: 1,
-                slideShadows : true,
-                loop: true,
-                loopedSlides: Model.imgGroup.length - 1
+                slideShadows : false
             },
             onTransitionStart: function(swiper){
-                let imgIndex = swiper.activeIndex;
+                let imgIndex = self.getCurrentImageIndex();
+                console.log(imgIndex);
                 let newImgList = self.getRandomImgList();
                 // 替换图片
                 if (self.rowSwiperImgList) {
@@ -117,6 +118,10 @@ const Main = {
                 self.rendRowAdvice(imgIndex);
             }
         });
+    },
+    
+    getCurrentImageIndex: function() {
+        return parseInt(document.querySelector(".swiper-slide-two").querySelector(".swiper-slide-active").querySelector(".swiper-img").getAttribute("data-index"), 10)
     },
     
     bindEvent: function () {
