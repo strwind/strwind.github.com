@@ -8,3 +8,12 @@ $('#webBanner').html(topHtml);
 $('#webFooterTable').html(footHtml);
 
 $('#g_main').width($(document).width());
+
+$items = $('#navCenter .itemContainer .item');
+setTimeout(function () {
+    $items.each(function (index, item) {
+        $(item).removeClass('itemSelected');
+        console.log($(item));
+    });
+}, 500)
+
