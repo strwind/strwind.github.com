@@ -10,9 +10,29 @@ $('#webFooterTable').html(footHtml);
 $('#g_main').width($(document).width());
 
 $items = $('#navCenter .itemContainer .item');
+
+var urlMap = {
+    '/': 0,
+    '/index.html': 0,
+    '/alipay.html': 1,
+    '/wechatPay.html': 1,
+    '/baiduPay.html': 1,
+    '/jdPay.html': 1,
+    '/zhsygzb.html': 2,
+    '/zhsycyb.html': 2,
+    '/zhsyprob.html': 2,
+    '/ydpay.html': 2,
+    '/koubei.html': 2,
+    '/alipayWindow.html': 3,
+    '/wechatWindow.html': 3,
+    '/customerHome.html': 4
+};
+var path = location.pathname;
 setTimeout(function () {
+    //先去掉选中状态
     $items.each(function (index, item) {
         $(item).removeClass('itemSelected');
     });
+    $items.eq(urlMap[path]).addClass('itemSelected');
 }, 500)
 
