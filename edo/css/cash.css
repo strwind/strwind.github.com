@@ -1,0 +1,144 @@
+﻿.box
+        {
+            width: 100%;
+            background-color: #fff;
+        }
+        .box .content
+        {
+            width: 1100px;
+            margin: 0 auto;
+        }
+        .box .content .control-group
+        {
+            width: 100%;
+        }
+        .box .content .control-group .control-title
+        {
+            width: 100%;
+            margin: 40px auto 14px;
+            color: #595959;
+            font-size: 28px;
+            text-align: center;
+        }
+        .box .content .control-group .control-content
+        {
+            width: 600px;
+            margin: 16px auto 40px;
+            color: #696969;
+            font-size: 12px;
+            text-align: center;
+        }
+        .box .content .control-group .control-border
+        {
+            border: 1px solid #adadad;
+            width: 80px;
+            height: 0px;
+            margin: 0 auto;
+        }
+        .box .content .control-group .control-bg
+        {
+            width: 100%;
+        }
+        .box .content .control-group .hexiao
+        {
+            background: url("../image/site/hexiao_bg.png") no-repeat center center;
+            height: 303px;
+        }
+        .box .content .control-group .huanjing
+        {
+            background: url("../image/site/huanjing_bg.png") no-repeat center center;
+            height: 197px;
+        }
+        .box .content .control-group .changjing
+        {
+            background: url("../image/site/changjing_bg.png") no-repeat center center;
+            height: 368px;
+        }
+        .box .content .control-group .banben
+        {
+            background: url("../image/site/banben_bg.png") no-repeat center center;
+            height: 227px;
+        }
+        .box .content .control-group .saoma
+        {
+            background: url("../image/site/saoma_bg.png") no-repeat center center;
+            height: 460px;
+        }
+        .box .content .control-group .kaquan
+        {
+            background: url("../image/site/kaquan_bg.png") no-repeat center center;
+            height: 460px;
+        }
+        .box .content .control-group .huiyuan
+        {
+            background: url("../image/site/huiyuan_bg.png") no-repeat center center;
+            height: 460px;
+        }
+        .box .content .control-group .waituan
+        {
+            background: url("../image/site/waituan_bg.png") no-repeat center center;
+            height: 460px;
+        }
+        .box .content .control-group .xianjin
+        {
+            background: url("../image/site/xianjin_bg.png") no-repeat center center;
+            height: 460px;
+        }
+        .box .content .control-group .jifen
+        {
+            background: url("../image/site/jifen_bg.png") no-repeat center center;
+            height: 460px;
+        }
+        .floa-title-img
+        {
+            margin: 0 auto;
+        }
+        .floa-title-img .float
+        {
+            margin-right: 25px;
+            float: left;
+        }
+        .floa-title-img a
+        {
+            height: 192px;
+        }
+        .floa-title-img .float:last-child
+        {
+            margin-right: 0;
+        }
+         .floa-title-img .float p
+        {
+            color:#636363;
+            text-align:center;
+            margin:25px auto;
+        }
+        .diancan
+        {
+            background: url("../image/site/smalldiancan.png") no-repeat center center;
+            width: 248px;
+            background-size: contain;
+        }
+        .shangchao
+        {
+            background: url("../image/site/smallshangchao.png") no-repeat center center;
+            width: 248px;
+            background-size: contain;
+        }
+        .beta
+        {
+            background: url("../image/site/smallbeta.png") no-repeat center center;
+            width: 248px;
+            background-size: contain;
+        }
+        .touch
+        {
+            background: url("../image/site/smalltouch.png") no-repeat center center;
+            width: 248px;
+            background-size: contain;
+        }
+        .clear
+        {
+            clear: both;
+            width: 100%;
+            height: 0px;
+        }
