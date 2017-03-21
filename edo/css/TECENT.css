@@ -1,0 +1,75 @@
+body
+{
+    background:#fff;
+    }
+
+.title {
+    font-size: 28px;
+    color: #00a0e8;
+    margin-bottom:110px;
+}
+.banner
+{
+    background:#043692 url('../image/site/TECENT-banner.png') no-repeat center !important;
+    height:400px;
+    width:100%;
+    }
+.TECENT-1 p:nth-of-type(2)
+{
+    font-size:20px;
+    margin:10px auto;
+    }
+.kaquan-wrapper
+{
+    background:#f4f7f9;
+    padding:5px 0;
+    }
+.kaquan-wrapper .control-group
+{
+    margin:40px auto !important;
+    }
+.kaquan .name
+{
+    color:#333 !important;
+    }
+.kaquan .kaquan-img
+{
+    width:118px;
+    height:118px;
+    display:block;
+    border-radius:50%;
+    margin:auto 51px;
+    border:1px solid #00a0e8;
+    margin-bottom:67px;
+    }
+.liucheng
+{
+    width:1100px;
+    height:1674px;
+    background:url('../image/site/TECENT3-bg.png') no-repeat center !important;
+    }
+.liucheng div
+{
+    padding:130px 0;
+    }
+.liucheng div p
+{
+    text-align:left;
+     color:#fe782f;
+    }
+.liucheng div p:first-child
+{
+    font-size:55px;
+    }   
+.liucheng div p:last-child
+{
+    font-size:30px;
+    }
+.liucheng div:nth-of-type(odd)
+{
+    margin-left:50%;
+    }
+.liucheng div:nth-of-type(even)
+{
+    margin-left:10%;
+    }

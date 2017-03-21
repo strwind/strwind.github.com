@@ -1,0 +1,314 @@
+body
+{
+    background:#fff;
+    }
+.control-group
+{
+    clear:both;
+    }
+.left-group
+{
+     float:left;
+    width:65%;
+    }
+.right-group
+{
+    width:25%;
+    height:132px;
+    background:url('/images/ewm.png') no-repeat center;
+    background-size:contain;
+    float:right;
+    border-left:1px solid #ddd;
+    }
+.gray-bg
+{
+    
+    margin: 20px auto;
+    padding: 25px;
+    width: 1050px !important;
+    background:#f5f5f5;
+    }
+.swiper-pagination-bullet-active
+{
+    background:#00A0E8 !important;
+    }
+.gray-title
+{
+    display:block;
+    color:#636363;
+    font-size:20px;
+    margin-bottom:30px;
+    margin-top:13px;
+    }
+.gray-text
+{
+    color:#636363;
+    }
+.blue-block-title
+{
+    line-height:35px;
+    font-weight:bold;
+    font-size:22px;
+    padding:5px 20px;
+    color:#fff;
+    background:#00a0e9;
+    }
+.gray-text-2
+{
+    color:#636363;
+    font-size:20px;
+    margin-top:40px;
+    padding-left:50px;
+    }
+ .zizhi li, .huodong li
+ {
+     float:left;
+     margin:0 8px;
+     overflow:hidden;
+     }
+ .zizhi li
+ {
+     width:239px;
+     height:163px;
+     }
+ .zizhi li img
+ {
+     height:100%;
+     }
+ .zizhi .swiper-slide
+ {
+     width:auto;
+     height:160px;
+     }
+  .huodong,.zizhi
+ {
+     margin:40px;
+     }
+ .huodong li
+ {
+     width:90px;
+     height:90px;
+     margin:auto 27px;
+     }
+ .tixi
+ {
+     background:url(../image/site/bg2.png) no-repeat center;
+     background-position: 22px 50px;
+     height:785px;
+     }
+ .hezuozizhi
+ {
+     width:751px;
+     margin:20px auto;
+     }
+ .hezuozizhi li
+ {
+     float:left;
+     width:209px;
+     }
+ .hezuozizhi li span
+ {
+     display:block;
+     }
+ .hezuozizhi li span:first-child
+ {
+     width:209px;
+     height:40px;
+     line-height:40px;
+     font-weight:bold;
+     color:#fff;
+     text-align:center;
+     font-size:30px;
+     background:#00a0e8;
+     }
+  .hezuozizhi li span:last-child
+  {
+      width:209px;
+      height:89px;
+      background:#e5f5fd;
+      }
+  .hezuozizhi li span a 
+  {
+      width:196px;
+      line-height:25px;
+      display:block;
+      padding: 18px 0;
+      }
+  .hezuozizhi li:first-child span a 
+  {
+      text-align:center;
+      display:block;
+      line-height:50px;
+      }
+   .hezuozizhi li:last-child span a 
+  {
+      width:149px;
+      display:block;
+      line-height:25px;
+      }
+ .line
+ {
+     width:62px;
+     height:132px;
+     float:left;
+     background:url('../image/site/jg.png') no-repeat;
+     }
+.hezuoliucheng 
+{
+    margin-top:50px;
+    width:747px;
+    }
+.line-2
+{
+    width:58px;
+    height:58px;
+    display:block;
+    background:url('../image/site/line-2.png') no-repeat center;
+    float:left;
+    }
+.hezuoliucheng li
+{
+    float:left;
+    height:58px;
+    font-size:18px;
+    padding:0 10px;
+    border:1px dashed #00a0e8;
+    border-radius:5px;
+    }
+.liucheng-btn:link,.liucheng-btn:visited,.liucheng-btn:hover,.liucheng-btn:active
+{
+    color:#fff;
+    }
+.liucheng-btn
+{
+    width:200px;
+    line-height:55px;
+    text-align:center;
+    color:#fff;
+    display:block;
+    margin-top:110px;
+    background:#00a0e8;
+    border-radius:6px;
+    height:55px;
+    font-size:30px;
+    }
+.weixin-pay
+{
+    background:url('../image/site/weixinpay-bg.png') no-repeat center;
+    height:320px;
+    }
+.wxpay-title
+{
+    text-align:center;
+    font-size:28px;
+    }
+.odd, .even
+{
+    }
+.img-box
+{
+    width:164px;
+    margin:20px 210px;
+    display:block;
+    overflow:hidden;
+    }
+.img-box img
+{
+    width:100%;
+    }
+.wx-text
+{
+    font-size:18px;
+    margin:50px 0;
+    display:block;
+    line-height:30px;
+    }
+.wx-text span
+{
+    color:#42af35;
+    font-size:18px;
+    }
+.wx-text p
+{
+    width:100%;
+    font-size:28px;
+    }
+.odd p
+{
+    text-align:left;
+    }
+.even p
+{
+    text-align:right;
+    }
+.odd .img-box
+{
+    margin-left:250px;
+    }
+.even .img-box
+{
+    margin-right:250px;
+    }
+.odd .img-box,.odd .wx-text
+{
+    float:left;
+    }
+.even .img-box,.even .wx-text
+{
+     float:right;
+     text-align:right;
+    }
+.banner
+{
+    background:#043692 url('../image/site/recruit-banner.png') no-repeat center !important;
+    height:500px;
+    width:100%;
+    }
+.type-li
+{
+     background: url('../image/site/recruit-topbg.png') repeat-y center !important;
+     height:290px;
+     width:1100px;
+    }
+
+.type-li li img{
+    margin:30px auto;
+}
+
+.type-li li p
+{
+    padding:0 20px;
+    }
+.type-li li p:nth-of-type(2)
+{
+    font-weight:bold;
+    margin-bottom:10px;
+    font-size:18px;
+    }
+.type-li li p:last-child
+{
+    text-align:left;
+    font-size:12px;
+    line-height:20px;
+    }
+.top-btn
+{
+    padding:80px 0;
+    margin-top:-270px;
+    }
+.top-btn a
+{
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    background:#0095d9;
+    border:2px solid #1dd2af;
+    color:#fff;
+    font-size:20px;
+    width:183px;
+    display:block;
+    }
+.top-btn a:link, .top-btn a:visited, .top-btn a:hover,.top-btn  a:active
+{
+    color:#fff !important;
+    }

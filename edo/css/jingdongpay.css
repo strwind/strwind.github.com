@@ -1,0 +1,105 @@
+body
+{
+    background:#fff;
+    }
+.swiper-button-prev
+{
+    right:  auto;
+    left:200px;
+    }
+.swiper-button-next
+{
+    right: 200px;
+    left:auto;
+    }
+.swiper-button-next, .swiper-button-prev
+{
+    width: 48px;
+    height: 90px;
+    background-size: contain;
+    }
+.swiper-pagination-bullet-active
+{
+    background:rgba(255,255,255,.0) !important;
+    border:2px solid #fff;
+    }
+.swiper-pagination-bullet
+{
+    background:#fff;
+    border:2px solid #fff;
+    opacity:1;
+    }
+.title
+{
+    font-size:22px;
+    color:#4d4d4d;
+    margin-bottom:40px;
+    }
+.youshi
+{
+    width:100%;
+    }
+.youshi li
+{
+    width:32%;
+    margin:40px auto;
+    padding-top:10px;
+    padding-left:12%;
+    min-height:136px;   
+    }
+.youshi li:nth-child(odd)
+{
+    float:left;
+    }
+ .youshi li:nth-child(even)
+ {
+     float:right;
+     }
+ .youshi-1
+ {
+      background:url('../image/site/youshi-1.png') no-repeat left;
+     }
+     
+ .youshi-2
+ {
+      background:url('../image/site/youshi-2.png') no-repeat left;
+     }
+ .youshi-3
+ {
+      background:url('../image/site/youshi-3.png') no-repeat left;
+     }
+  .youshi-4
+ {
+      background:url('../image/site/youshi-4.png') no-repeat left;
+     }
+.youshi p
+{
+    text-align:left;
+    }
+.youshi li p:first-child
+{
+    font-size:20px;
+    margin-bottom:20px;
+    }
+.youshi li p:last-child
+{
+    line-height:20px;
+    color:#7e7e7e;
+    }
+.img-box img
+{
+    width:100%;
+    }
+.jszc
+{
+    font-size:18px;
+    line-height:28px;
+    }
+.jszc img
+{
+        margin: -5px 3px;
+    }
+.swiper-slide img
+{
+    width:100%;
+    }

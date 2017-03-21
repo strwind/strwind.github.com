@@ -1,0 +1,152 @@
+body
+{
+    background:#fff;
+    }
+.control-group
+{
+    clear:both;
+    }
+.banner
+{
+    background:#050507 url('../image/site/case-bg.png') no-repeat center !important;
+    height:435px;
+    width:100%;
+    }
+ .top-list
+ {
+     width:1100px;
+     margin-top:30px;
+     }
+.top-list li
+{
+    width:364px;
+    height:230px;
+    float:left;
+    background:#f8f8f8;
+    }
+.top-list li p:first-child
+{
+    font-size:16px;
+    text-align:left;
+    padding-left:20px;
+    margin:28px auto;
+    margin-right:20px;    
+    }
+.top-list li p:nth-of-type(2)
+{
+    height:165px;
+    }
+.top-list li span
+{
+    width:46px;
+    height:30px;
+    padding-left:24px;
+    text-align:center;
+    color:#fff;
+    line-height:30px;
+    float:right;
+    background:#4293c1  url('../image/site/case-sellicon.png') no-repeat;
+    background-position:10px 8px;
+    margin-top:-70px;
+    opacity:0;
+     transition: all 2s;
+    }
+.top-list li:hover span
+{
+    
+    opacity:1;
+     transition: all 2s;
+    }
+.line-ver
+{
+    width:3px;
+    height:230px;
+    display:block;
+    float:left;
+    }
+.line-lev
+{
+    height:3px;
+    width:100%;
+    }
+.title {
+    font-size: 18px;
+    color: #00a0e8;
+    margin-bottom:30px;
+}
+.shop-list
+{
+    width:998px;
+    }
+.shop-list li
+{
+    width:474px;
+    float:left;
+    margin-bottom:20px;
+    }
+.shop-list li:nth-of-type(even)
+{
+    float:right;
+    }
+.shop-list li .img-box
+{
+    border:7px solid #ddd;
+    height:242px;
+    display:block;
+    overflow:hidden;
+    margin-top:-23px;
+    }
+.ewm-box
+{
+    position: relative;
+    display:block;
+    width:144px;
+    padding:20px;
+    background:#fff;
+    margin:auto;
+    margin-top:0;
+    transition: all 1s;
+    }
+.img-box:hover .ewm-box
+{
+     margin-top:-175px;
+     transition: all 1s;
+    }
+.ewm-box span
+{
+    display:block;
+    background:#fff;
+    }
+.shop-box
+{
+        position: relative;
+    }
+.shop-list li>p:nth-of-type(3)
+{
+    padding:0 30px;
+    text-align:left;
+    }
+.shop-list li>p:nth-of-type(2)
+{
+    text-align:center;
+    font-size:18px;
+    margin:10px auto;
+    color:#0095d9;
+    }
+.totop,.totop:hover{
+    transition: all 1s;
+}
+#top
+{
+    width:33px;
+    height:45px;
+    position:fixed;
+    bottom:20px;
+    right:10%;
+    display:none;
+    background: url('../image/site/totoph.png') no-repeat;
+    }
+#top:hover
+{
+     background: url('../image/site/totop.png') no-repeat;
+    }

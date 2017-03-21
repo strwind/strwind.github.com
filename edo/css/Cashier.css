@@ -1,0 +1,203 @@
+body
+{
+    background:#fff !important;
+    }
+.three-columns
+{
+    margin-bottom:70px !important;
+    }
+.three-columns li p
+{
+    color:#3e3e3e;
+    font-size:16px;
+    margin-top:30px;
+    line-height:26px;
+    }
+ .title-span,.title-span span
+ {
+     display:block;
+     
+     }
+ .title-span
+ {
+     padding-left:30px;
+     }
+ .title-span span:first-child
+ {
+     font-size:28px;
+     color:#00a0e8;
+     font-weight:bold;
+     }
+ .title-span span:last-child
+ {
+     color:#999;
+     }
+ .three-columns>p
+ {
+     font-size:24px;
+     margin-bottom:10px;
+     color:#222;
+     }
+ .Interface
+ {
+     padding-left:350px;
+     margin-top:60px;
+     }
+.Interface li
+{
+    width:192px;
+    float:left;
+    margin: 40px auto;
+    margin-left:44px;
+    }
+.Interface li span
+{
+    display:block;
+    float:left;
+    border-radius:50%;
+    padding:10px;
+    margin-top:-25px;
+    margin-left:-25px;
+    }
+.Interface li p
+{
+    margin-top:130px;
+    font-size:18px;
+    }
+.round
+{
+    width:500px !important;
+    padding:30px 0;
+    }
+.round li
+{
+    width:77px;
+    height:37px;
+    border-radius:50%;
+    padding:20px 0;
+    float:left;
+    margin:auto 24px ;
+    margin-bottom:10px;
+    }
+.round li p
+{
+    line-height:19px;
+    font-size:18px;
+    color:#fff;
+    }
+.title
+{
+ font-size:20px !important;
+ color:#484747;   
+    }
+.left,.right
+{
+    width:519px;
+    height:100px;
+    }
+.left,.right,.center-line
+{
+    float:left;
+    margin-top:50px;
+    }
+.center-line
+{
+    margin:auto 30px;
+    margin-top:150px;
+    }
+.left .first-span,.right .first-span
+{
+    width:100%;
+    line-height:28px;
+    font-size:16px;
+    padding:10px 0;
+    display:block;
+    }
+.right .first-span
+{
+    text-align:left;
+    float:left;
+    padding-left:80px;
+    background:url('../image/site/canyin-right1.png') no-repeat left;
+    }
+.left .first-span
+{
+    text-align:right;
+    float:right;
+    padding-right:80px;
+    background:url('../image/site/canyin-left1.png') no-repeat right;
+    }
+.left p, .right p
+{
+    height:28px;
+    line-height:28px;
+    margin:10px auto;
+    clear:both;
+    }
+.right p
+{
+    text-align:left;
+    padding-left:35px;
+    background:url('../image/site/canyin-select.png') no-repeat left;
+    }
+.left p
+{
+    text-align:right;
+    padding-right:35px;
+    background:url('../image/site/canyin-select.png') no-repeat right;
+    }
+.left p:nth-of-type(1),.right p:nth-of-type(1)
+{
+    margin-top:50px;
+    font-size:20px;
+    background:none;
+    }
+.left p:nth-of-type(1)
+{
+    padding-right:0;
+    float:right;
+    }
+.right p:nth-of-type(1)
+{
+    padding-left:0;
+    float:left;
+    }
+.four-columns p
+{
+    color:#404040;
+    }
+.four-columns p:last-child
+{
+    margin-top:25px;
+    font-size:16px;
+    }
+.gray-title
+{
+    color:#999;
+    margin-top:15px;
+    }
+.tongdao-icon
+{
+    width:800px;
+    padding-top:60px;
+    }
+.tongdao-icon li
+{
+    float:left;
+    }
+.tongdao-icon li:nth-of-type(even),.tongdao-icon li:nth-of-type(13)
+{
+    width:18px;
+    height:76px;
+    margin:auto 20px;
+    background:url('../image/site/canyin4-jia.png') no-repeat center;
+    }
+.tongdao-icon li:nth-of-type(13)
+{
+    margin:auto;
+    background:url('../image/site/canyin4-dian.png') no-repeat center;
+    }
+.tongdao-icon p img
+{
+    margin-top:85px;
+    }

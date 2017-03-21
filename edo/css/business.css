@@ -1,0 +1,159 @@
+﻿.title
+{
+    font-size:24px;
+    margin-bottom:35px;
+    }
+.text
+{
+    font-size:16px;
+    line-height:28px;
+    }
+.three-columns
+{
+    margin-bottom:70px !important;
+    }
+.case-img1
+{
+    margin-bottom:25px;
+    }
+.hexin
+{
+    width:33%;
+    margin:13px auto;
+    }
+.hexin, .hexin span
+{
+    display:block;
+    float:left;
+    }
+.hexin span
+{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#0fa6ea;
+    margin-right:10px;
+    color:#fff;
+    text-align:center;
+    }
+.jt
+{
+    width:50px ;
+    height:50px;
+    display:block;
+    float:left;
+    border:none !important;
+     background:url('../image/site/jt.png') no-repeat center;
+    }
+.up1,.bottom1
+{
+    margin:auto 362px;
+    }
+.up2,.bottom2
+{
+    margin-left:174px;
+    }
+.bottom1,.bottom2
+{
+    transform:rotate(180deg);
+    }
+.right,.left
+{
+    width:50px !important;
+    }
+.right
+{
+    transform:rotate(90deg);
+    }
+.left
+{
+    transform:rotate(-90deg);
+    }
+.icon-list>span
+{
+    display:block;
+    width:109px;
+    height:68px;
+    border:1px dashed #999;
+    margin:9px;
+    float:left;
+    }
+.case-img2
+{
+    width:100%;
+    height:40px;
+
+    }
+.border-line
+{
+    height:68px !important;
+    line-height:68px;
+    margin:30px auto;
+    }
+.shangquan
+{
+    width:100%;
+    }
+.shangquan li
+{
+    width:25%;
+    height:346px;
+    float:left;
+    }
+.anli li
+{
+    width:200px;
+    height:200px;
+    float:left;
+    margin:37px;
+    }
+.btm-slogen
+{
+    width:443px;
+    margin:auto;
+    }
+.btm-slogen span
+{
+    display:block;
+    float:left;
+    font-size:18px;
+    }
+.line
+{
+    width:90px;
+    height:0;
+    border-bottom:1px solid #ccc;
+    margin:10px 5px ;
+    }
+.xtc
+{
+    background:#fff url('../image/site/case4-11.png') no-repeat center;
+    }
+.xtc:hover
+{
+    background:#fff url('../image/site/case4-12.png') no-repeat center;
+    }
+.wd
+{
+    background:#fff url('../image/site/case4-21.png') no-repeat center;
+    }
+.wd:hover
+{
+    background:#fff url('../image/site/case4-22.png') no-repeat center;
+    }
+.xtd
+{
+    background:#fff url('../image/site/case4-31.png') no-repeat center;
+    }
+.xtd:hover
+{
+    background:#fff url('../image/site/case4-32.png') no-repeat center;
+    }
+.ty
+{
+    background:#fff url('../image/site/case4-41.png') no-repeat center;
+    }
+.ty:hover
+{
+    background:#fff url('../image/site/case4-42.png') no-repeat center;
+    }

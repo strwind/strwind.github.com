@@ -1,0 +1,85 @@
+body
+{
+    background:#fff;
+    }
+
+.title,.border-title {
+    font-size: 28px;
+    color: #00a0e8;
+    margin-bottom:50px;
+}
+.border-title
+{
+    border:1px solid #00a0e8;
+    margin-top:100px;
+    width:400px;
+    height:60px;
+    line-height:60px;
+    }
+.banner
+{
+    background:#043692 url('../image/site/fuwuchuang-banner.png') no-repeat center !important;
+    height:400px;
+    width:100%;
+    }
+.information p:last-child
+{
+    font-size:16px;
+    line-height:30px;
+    }
+.gongneng .name
+{
+    color:#333 !important;
+    font-size:20px;
+    }
+.gongneng .gongneng-img
+{
+    width:118px;
+    height:118px;
+    display:block;
+    border-radius:50%;
+    border:1px solid #00a0e8;
+    margin-bottom:67px;
+    }
+.liucheng
+{
+    background:url('../image/site/fwc4-1.png');
+    width:900px;
+    height:555px;
+    }
+.kaquan-wrapper
+{
+    background:#f8f8f8;
+    }
+.kaquan p:last-child
+{
+    margin-top:50px;
+    }
+.liucheng
+{
+    width:1075px;
+    height:1994px;
+    margin-top:20px;
+    background:url('../image/site/fwc3-bg.png') no-repeat center !important;
+    }
+.liucheng div
+{
+    padding:123px 0;
+    }
+.liucheng div p
+{
+    text-align:left;
+     color:#fe782f;
+    }
+.liucheng div p
+{
+    font-size:55px;
+    }   
+.liucheng div:nth-of-type(odd)
+{
+    margin-left:60%;
+    }
+.liucheng div:nth-of-type(even)
+{
+    margin-left:10%;
+    }
